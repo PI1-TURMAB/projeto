@@ -1,12 +1,13 @@
 \chapter{Metodologia e organização da equipe}
 
+\section{Organização geral das equipes}
+
 A primeira atividade após a formação dos grupos foi a definição das áreas de trabalho no projeto de forma que fosse possível bolar uma metodologia a ser seguida para atingir um aproveitamento maior no projeto.
 Após duas reuniões a equipe optou pela separação do grupo que contém em média trinta e cinco pessoas em cinco áreas de trabalho, sendo elas:
 
 \begin{itemize}
 \item Controle: Execução do projeto do sistema de controle de temperatura, sistema de arrefecimento
-\item Transmissão de Calor: A premissa do projeto é criar um sistema de arrefecimento que se adapte às situações termodinâmicas encontradas na câmara de combustão de um sistema híbrido de um simulador.
-\item Processamento de dados: Tem como objetivo elaborar uma estratégia para controlar o sistema de arrefecimento a partir dos dados fornecidos pelo grupo de controle.
+\item Transmissão de Calor: O objetivo do grupo é compreender os efeitos termodinâmicos existentes no sensor, de forma que uma proposta de controle para os mesmos seja elaborada.
 \item Estrutura: O objetivo do grupo de estrutura é entregar um modelo teórico e prático do funcionamento mecânico do sistema de arrefecimento.
 \item Gerência de projeto: Tem como objetivo alinhar as equipes, organizar atividades e tratar de artefatos como requisitos, custos do projeto.
 \end{itemize}
@@ -14,3 +15,84 @@ Após duas reuniões a equipe optou pela separação do grupo que contém em mé
 Com o intuito de organizar tais equipes, foram definidos um gerente geral, e os gerentes de cada área de trabalho, onde a cada semana será feita reuniões para alinhamento do projeto, nas aulas de quarta-feira, onde os líderes se encontram e repassam o que cada grupo fez na semana anterior, oferecendo propostas de melhorias e levantamento de possíveis problemas que foram encontrados.
 A idéia é cada grupo seguir a metodologia ágil, baseando-se no SCRUM e Kanban, a fim de que o gerente de cada equipe determine as tarefas, e possa acompanhar o andamento dessas atividades através de reuniões diárias com sua equipe.
 A equipe de gerência se dividirá para que cada integrante da mesma possa acompanhar os grupos de forma individual para possíveis levantamentos de soluções em dificuldades encontradas.
+
+
+\section{Organização específica das equipes}
+
+Essa seção vai falar como os times se organizaram para trabalhar durante o projeto.
+
+\subsection{Time de estruturas}
+
+Existem várias propostas de direção, a partir dessa problemática, serão realizados os estudos descritos abaixo, de forma a decidir qual sistema adotar, tendo em vista o custo-benefício e a viabilidade do projeto.
+O projeto referente à parte teórica de estruturas será dividido em 7 subtópicos:
+
+\begin{itemize}
+\item Líquido: Nessa parte, o grupo irá fazer o estudo das opções de líquido disponíveis para arrefecimento do sensor. Será feito o estudo em conjunto com o grupo de Transmissão de Calor.
+\item Resfriador: Nessa parte serão avaliadas as opções de radiadores, serpentinas ou outros métodos de perda de calor. Será feito o estudo em conjunto com o grupo de Transmissão de Calor.
+\item Bomba: Serão estudadas diferentes bombas de fluido para o sistema. Nesta fase serão levados em consideração a potência da bomba, a vazão e a pressão nas quais a bomba trabalha.
+\item Reservatório: Esta etapa consiste em decidir o tamanho do reservatório necessário para o funcionamento do teste e para o resfriamento pós teste (total de 2 min aproximadamente)
+\item Alimentação: Decidir o sistema elétrico e eletrônico e, sobretudo, avaliar a demanda energética do projeto. Esta fase será realizada em conjunto ao grupo de Processamento de Dados.
+\item Condutores: Esta etapa consiste em avaliar o material e as dimensões dos tubos e conectores entre o sistema de arrefecimento e o sensor.
+\item Bancada: Obrigatoriamente a última etapa, consiste em avaliar a organização do protótipo junto à bancada de testes nos quesitos ergonomia e segurança.
+\end{itemize}
+
+\subsection{Time de transmissão de calor}
+
+O grupo possui diferentes hipóteses para trabalhar no sistema termodinâmico do sensor, com isso serão efetuadas diferentes atividades de estudo que estão descritas abaixo.
+
+\begin{itemize}
+\item Transmissão de calor no motor: Serão estudados os materiais e constituição do motor de modo a realizar uma estruturação das informações obtidas para utilização futura.
+\item Transmissão de calor no sensor: Serão estudados os materiais e constituição do sensor de modo a realizar uma estruturação das informações obtidas para utilização futura.
+\item Líquido de arrefecimento: Com base nos resultados obtidos dos estudos anteriores, será feito um estudo de possibilidades de líquidos encontrados no mercado a fim de sanar as especificações previstas anteriormente. Este tópico se desenvolverá com o grupo de Estruturas.
+\item Materiais: Nesta fase, serão determinados os materiais plausíveis de serem utilizados no sistema de arrefecimento, estudando suas capacidades térmicas.
+\item Resfriamento do sistema: Uma vez o líquido selecionado, o grupo buscará soluções para o sistema de arrefecimento e sua forma de dissipar o calor adquirido do sensor. Este tópico se desenvolverá com o grupo de Estruturas.
+\item Simulação: Neste momento, o sistema já se encontrará teoricamente pronto, isto é, com toda sua estrutura e modelo de funcionamento determinado. Assim, o grupo, utilizará de ferramentas computacionais e teóricas, a fim de encontrar falhas no projeto. Fazendo as observações necessárias no processo.
+\item Aprimoramento: Uma vez observadas as falhas e soluções para tal, o grupo utilizará das informações coletadas para aprimorar o projeto a fim de reduzir o máximo suas possíveis limitações em relação às restrições propostas.
+\item Bancada: Última etapa do projeto, onde o grupo finaliza todas as questões não resolvidas e a fim de assegurar segurança e ergonomia ao projeto de produto. Este tópico se desenvolverá com todos os grupos.
+
+\end{itemize}
+
+\subsection{Time de controle}
+
+O grupo irá realizar diferentes atividades ao decorrer do semestre, algumas estão descritas abaixo:
+\begin{itemize}
+\item Definição de sensores
+\item Definição de microcontrolador
+\item Simulações do projeto esquemático
+\item Programação do sistema de controle
+\item Implementação do protótipo
+\end{itemize}
+
+A fim de completar essas atividades existem as seguintes áreas de trabalho no grupo:
+
+\begin{itemize}
+\item Pesquisa: envolve pesquisas de sensores, microcontroladores, informações sobre estruturas a serem controladas, e tecnologias de referência
+\item Análise: alinhamento da pesquisa com os outros grupos do projeto a fim de realizar uma filtragem das pesquisas, estabelecimento e definição do projeto teórico e produção do projeto esquemático.
+\item Construção: simulação do projeto esquemático, programação do sistema de controle, ajustes e definições e implementação do protótipo
+
+\end{itemize}
+
+\subsection{Time de processamento de dados}
+
+A equipe se organizará por diferentes atividades onde todos integrantes participarão das mesmas, estas estão descritas abaixo:
+
+\begin{itemize}
+\item Estudo de tecnologia LabView: consiste em entender o funcionamento básico do software a ser utilizado para o processamento dos dados
+\item Estudo de processamento de sinais: consiste em entender como funciona o processamento dos sinais na tecnologia a ser utilizada
+\item Criação de algoritmo para o processamento dos dados: criação do algoritmo capaz de controlar o sistema de arrefecimento
+\item Testar o algoritmo criado: realizar testes do algoritmo criado, para verificar se esse é viável para utilização
+\end{itemize}
+
+\subsection{Time de gerência}
+
+O grupo de gerência será responsável por manter o alinhamento do projeto, garantir que o escopo seja seguido e para isso a organização se dará na separação dos integrantes do grupo para acompanhar cada equipe existente de forma que o feedback sempre chegue de forma mais rápida.
+
+As áreas contempladas pela equipe de gerência serão:
+
+\begin{itemize}
+\item Requisitos: elicitação dos requisitos de alto nível para criação de uma proposta melhor
+\item Definição de metodologia: elaborar uma metodologia capaz de lidar com grupos grandes e que não gerem muito overhead
+\item Custo: fazer o levantameno de custos do projeto
+\item Alinhamento de projeto: manter as equipes alinhadas de forma que o escopo seja seguido até o fim do projeto.
+\item Documentação do andamento do projeto: validação e documentação das etapas do projeto para as apresentações
+\end{itemize}
