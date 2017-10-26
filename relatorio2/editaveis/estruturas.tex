@@ -10,7 +10,12 @@ Durante as pesquisas realizadas pelo grupo, constaram inúmeras hipóteses de mo
 
 A montagem geral da estrutura do projeto será baseada no esquemático da figura abaixo. Nele constam: 4 (quatro) coolers, um reservatório, duas válvulas de redirecionamento de fluxo, duas bombas e a tubulação (incluindo os conectores não ilustrados). O projeto consiste em bombear a água do reservatório para o sensor da Kistler, que aquecerá o líquido. Após o contato com o sensor, a água retorna ao sistema passando pelo radiador, onde será resfriada e adicionada de volta ao reservatório.
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[width=15cm, keepaspectratio=true]{figuras/projetoestrutural.eps}
+   \caption{Esquemático geral do projeto de estrutura}                        
+\end{figure}
+
 
 \subsection{Sistema de bombeamento e arrefecimento}
 
@@ -30,7 +35,11 @@ Sobre o primeiro tópico, o uso de um watercooler comercial foi avaliado tendo e
 Esse condiz com o top de linha encontrado em solo brasileiro para o resfriamento de processadores em computadores domésticos. O mesmo possui especificações exemplares, principalmente no que se refere à bomba, superando o sistema de resfriamento da Kistler no que se diz respeito à pressão em cerca de 1 bar (aprox. 3,5 contra 2,5) [2][3].
 Apesar da sua viabilidade técnica, logo foi constatada a sua inviabilidade econômica para o projeto, esse classificado com low budget, sendo o preço do kit é de R\$ 2225,76 (dois mil duzentos e vinte e cinco reais e setenta e seis centavos) [4].
 
-Imagem
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/watercooler1.eps}
+   \caption{KIT DE MONTAGEM THERMALTAKE PACIFIC REEF 240 PETG DIY LCS BLUE CL-W120- CA12BU-A.}               
+\end{figure}
 
 \subsubsection{WaterCooler CoolerMaster Masterliquid Pro 240 MLY-D24M-A20MB-R1}
 
@@ -42,13 +51,17 @@ No entanto, os dados sobre as ventoinhas utilizadas são bem completos, sendo es
 \item Velocidade: $650 ~ 2000 RPM (PWM) \pm 10$\%;
 \item Fluxo de ar: 66,7 CFM (máx.);
 \item Pressão de ar: 2,34 mmH2O (máx.);
-\item MTTF: 490000 horas
-\item L-10 Life: 70000 horas
+\item MTTF: 490000 horas;
+\item L-10 Life: 70000 horas;
 \end{itemize}
 
 Todos os dados foram obtidos da referência [5], a ficha do produto. Por causa disso, sua possibilidade de uso foi deixada em aberto, caso se visse a necessidade. Seu preço encontrado foi o de R\$ 670,47 (seiscentos e setenta reais e quarenta e sete centavos) [6].
 
-Imagem
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/watercooler2.eps}
+   \caption{WATERCOOLER COOLERMASTER MASTERLIQUID PRO 240 MLY-D24M- A20MB-R1.}               
+\end{figure}
 
 \subsubsection{WaterCooler CoolerMaster 240V MLX-D24M-A20PW-R1}
 
@@ -63,7 +76,11 @@ Sobre os modelos de entrada encontrados no mercado brasileiro, o mesmo problema 
 \end{itemize}
 Todos os dados foram obtidos da referência [7], a ficha técnica do produto. Dada as suas especificações técnicas observáveis semelhantes, a sua viabilidade se torna muito maior se comparando com o watercooler analisado anteriormente, principalmente por causa do seu preço médio R\$ 376,35 (trezentos e setenta e seis reais e trinta e cinco centavos) [8], praticamente a metade do encontrado anteriormente.
 
-IMagem
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/watercooler3.eps}
+   \caption{WATERCOOLER COOLERMASTER 240V MLX-D24M- A20PW-R1.}               
+\end{figure}
 
 \subsection{Possibilidade 2: Montagem do watercooler próprio}
 
@@ -86,14 +103,23 @@ O modelo da bomba escolhido foi o DC30QA-1230 [9] se encontra na referência [10
 Sobre as especificações acima, é importante citar que o diâmetro de saída é o mesmo do sistema da Kistler e a bomba possui uma pressão máxima de 5 bar, mais de três vezes superior ao da Kistler, o que permite uma margem de trabalho. O seu preço é de U\$ 10,32 (dez dólares e trinta e dois centavos) [10].
  
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/bomba.eps}
+   \caption{Bomba escolhida.}               
+\end{figure}
 
 \subsubsection{Radiador}
 
 O modelo de radiador foi o mais difícil de se encontrar, devido à ausência de informações técnicas, tanto no que se refere ao sistema da Kistler, quanto no que se diz dos watercoolers. No entanto, conforme cita a referência [11], um site especializado em watercooler, assumindo radiadores do mesmo tamanho, o que fizemos ao longo das análises, escolhendo radiadores de 240 mm, a diferença de desempenho é muito pequena, sendo que fatores como a velocidade das ventoinhas tem influência muito maior do que a qualidade do radiador em si. Com isso em mente, escolhemos um radiador de alumínio com conexões G $1/4$, com preço de R\$ 150,00 (cento e cinquenta reais). [12]
 
-IMagem
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/radiador.eps}
+   \caption{Radiador escolhido.}               
+\end{figure}
 
+\newpage
 \subsubsection{Ventoinha}
 
 Conforme citado anteriormente, as ventoinhas podem ser de uma maior importância que o próprio radiador, de forma que a escolha das mesmas foi feita buscando a melhor ventoinha possível a um custo-benefício adequado. Como parâmetro para a escolha da mesma, fora colocada as especificações técnicas da ventoinha analisada no watercooler de menor preço. 
@@ -114,16 +140,26 @@ Como resultado, a ventoinha escolhida foi a Cooler FAN “CoolerMaster Sickleflo
 
 A ventoinha escolhida possui uma velocidade de trabalho igual as do watercooler, mesma expectativa de vida útil, e mesmo tamanho. Porém, e mais importante, os fatores como fluxo de ar e pressão de ar encontrados são superiores a ventoinha do watercooler, o que foi considerado como ideal na escolha da mesma. Seu preço é de R\$ 35,18 (trinta e cinco reais e dezoito centavos) [13] e para o projeto serão necessárias quatro da mesma. Suas especificações técnicas foram encontradas na mesma referência que o seu preço.
 
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/ventoinha.eps}
+   \caption{Ventoinha escolhida.}               
+\end{figure}
+
 
 \subsection{Líquido de arrefecimento}
 
 O líquido de arrefecimento tem como função principal trocar calor com o sensor, refrigerando o sistema para evitar o sobreaquecimento.
 Para isso o fluido de arrefecimento percorre a tubulação do sistema sem entrar em contato direto com os componentes eletrônicos do sensor, assim ele é resfriado graças à troca de calor entre a água (temperatura ambiente) e o sensor estimado em no máximo 450ºC.  Para que haja um fluxo controlado de água, será usado um sistema de bombeamento, garantindo a troca efetiva de calor.
 O líquido de arrefecimento será a água pois, além de ser um fluido de fácil obtenção, possui propriedades térmicas e viscosas compatíveis com os requisitos do projeto a ser desenvolvido.
-Sua capacidade térmica é bem elevada quando comparada com outras substâncias conhecidas (aproximadamente 1cal/g.ºC), além de possuir uma viscosidade baixa como é possível observar na tabela retirada de [1].
+Sua capacidade térmica é bem elevada quando comparada com outras substâncias conhecidas (aproximadamente 1cal/g.ºC), além de possuir uma viscosidade baixa como é possível observar na tabela abaixo.
 
-IMAGEM
+\newpage
 
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.8, keepaspectratio=true]{figuras/tabelaagua.eps}               
+\end{figure}
 
 A água é um liquido em abundância e que pode ser facilmente encontrado. O litro de aguá mineral, que possui poucas impurezas, é cerca de um real e, a água destilada pode ser encontrada a R\$1,95 o litro [3]. Portanto, é um líquido de arrefecimento com pontos econômicos muito positivos.
 
@@ -147,7 +183,11 @@ O material foi escolhido por possuir excelentes propriedades, que são indispens
 \item Baixa aderência: Por ser antiaderente, o PTFE é o polímero adequado para tubos e mangueiras que conduzem líquidos viscosos e adesivos. 
 \end{itemize}
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/tabela2.eps} 
+   \caption{Dados fornecidos pela HOESCHT}              
+\end{figure}
 
 \subsubsection{Conectores}
 
@@ -160,7 +200,11 @@ Os conectores escolhidos são da marca Swagelok, uma multinacional americana com
 \item Excelente resistência à fadiga por vibrações e suporte do tubo, etc.;
 \end{itemize}
 
-Imagem
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/conectores.eps} 
+   \caption{Projeto de travagem dos conectores SWAGELOK.}              
+\end{figure}
 
 Como colocado acima a utilização dos mesmos é explicada por terem melhor resistência a: 
 
@@ -174,7 +218,12 @@ Como colocado acima a utilização dos mesmos é explicada por terem melhor resi
 A Swagelok produz os conectores a partir dos mais diversos materiais, referente contato com a parte técnica da empresa foi conseguido documentos técnicos sobre valores máximos para temperatura e pressão, bem como o custo dos conectores de cada tipo de material, com isso pode-se realizar a correta escolha dos conectores para a utilização.
 O material escolhido é o latão, seguindo o conselho do responsável técnico da Swagelok.
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/temperaturaconectores.eps} 
+   \caption{Projeto de travagem dos conectores SWAGELOK.}              
+\end{figure}
+
 
 Como diz Adriano Gonçalves (Resposável técnico da Swagelok), “Em relações comerciais, o material com o melhor custo e prazo de entrega é o latão, com seu preço final saindo por menos da metade do preço do aço inoxidável 316.”
 
@@ -185,15 +234,29 @@ Como informado anteriormente no relatório, temos três opções para implementa
 \item 5 Redutores (2-Sensor de Fluxo, 2-Reservatório e 1-Sensor de Temperatura);
 \end{itemize}
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/peca1.eps} 
+\end{figure}
+
+
 \begin{itemize}
 \item 2 T (Sensor de Pressão e de Temperatura);
 \end{itemize}
-IMAGEM
-\begin{itemize}
+
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/peca2.eps} 
+\end{figure}\begin{itemize}
+
+\newpage
 \item 2 Machos (Radiador);
 \end{itemize}
-IMAGEM
+
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/peca3.eps} 
+\end{figure}
 
 A opção de implementação traz a variação da quantidade de cotovelos $90º$, tal variação é especificada na tabela abaixo:
 
@@ -211,7 +274,10 @@ Opção & Número de cotovelos\\
 \caption{Variação de cotovelos}
 \end{table}
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/peca4.eps} 
+\end{figure}
 
 \subsection{Reservatório}
 
@@ -245,7 +311,12 @@ O reservatório em questão é produzido a partir do PEAD (Polietileno de Alta D
 \end{itemize}
 O reservatório conta com dimensões gerais: 15 x 33 x 22 cm, e peso total (vazio): 355 gramas.
 
-IMAGEM
+
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/reservatorio.eps} 
+   \caption{Reservatório do radiador}
+\end{figure}
 
 \subsection{Riscos da estrutura}
 
@@ -257,7 +328,11 @@ Como medida de prevenção geral, antes do teste principal todo o sistema de ref
 Como parte principal de todo o sistema de refrigeração, a bomba deve ter um grau de confiabilidade muito alto pois, caso ela pare, o sensor chegará a uma temperatura onde os dados coletados são imprecisos e o teste será descartado.
 Como medida de prevenção, duas bombas serão utilizadas para, caso uma venha a falhar, o teste possa continuar. A bomba A funcionará inicialmente enquanto a B está desligada. Em caso de mal funcionamento da A, a B será ligada e o teste continuará sem interrupções. 
 
-IMAGEM
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/conexaobombas.eps} 
+   \caption{Representação do sistema das bombas}
+\end{figure}
 
 Para que haja a troca da bomba durante o teste, duas válvulas serão utilizadas. Uma para a saída das bombas, esta sendo livre, e uma para a entrada da bomba, esta com um servo motor. A primeira válvula ficará fechada para a bomba B e, caso a bomba A falhe, será ativado o fluxo na bomba B e a própria impulsão da bomba abrirá a válvula a fechando para a bomba A. Já na entrada do sistema, haverá um servo motor conectado ao sistema de monitoramento geral. Quando for indicada a falha na bomba, o servo se ativará e fechará o fluxo para a bomba A, abrindo, simultaneamente, para a bomba B.
 
