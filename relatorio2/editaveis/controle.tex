@@ -171,6 +171,11 @@ Considerando as necessidades apontadas e as características apresentadas pelo s
 \end{itemize}
 \begin{figure}[!htb]                   
 	\centering                          
-	\includegraphics[scale=0.5]{figuras/Figura_7.eps}
-	\caption{Sensor de Fluxo para a tubulação}               
+	\includegraphics[scale=0.3]{figuras/Figura_7.eps}
+	\caption{Sensor de Nível para o reservatório}               
 \end{figure}
+\subsection{Explicação}
+A escolha por este sensor é semelhante à escolha do sensor de fluxo. Considerando o local onde será instalado, suas dimensões se adequam às dimensões do reservatório escolhido para guardar o líquido de arrefecimento, além de possuir compatibilidade com Arduino, PIC, ARM, AVR, dentre outras plataformas de prototipagem. Seu preço, de R\$ 24,90 não é o mais barato dentre as boias vendidas pela empresa, entretanto, as características mostradas acima resultam em um excelente custo-benefício.\\
+Cabe ressaltar que o uso de um sensor de nível para o reservatório é imprescindível, pois caso ocorra um vazamento, a leitura de dados indicará um problema, visto que se trata de um sistema fechado. Desta forma, este problema poderá ser solucionado antes que erros mais graves aconteçam, afetando o funcionamento do sistema e consequentemente do sensor de pressão da Kistler.\\
+\section{Amplificação de sinais}
+A parte de amplificação de sinais é baseada na comunicação entre os sensores e o dispositivo NI 6320, que é uma placa de recolhimento de dados que utiliza o software LabVIEW para análise de dados. Entretanto, tendo em vista que a alguns sensores possuem saída na faixa de miliVolts e a partir dos parâmetros definidos pelo grupo de Processamento de Sinais, para a leitura é necessário um sinal com tensão mínima de entrada que varia entre 0.2 a 10 Volts. Portanto, é necessário um circuito amplificador de sinal entre o sensor e a placa, aumentando proporcionalmente o sinal de saída do sensor, para que a placa possa realizar uma leitura correta dos valores medidos pelo sensor.
