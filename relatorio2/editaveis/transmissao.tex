@@ -19,18 +19,18 @@ $$ Q_{cond} = k_{t}.4.\pi.r_{0}.r_{i}.\frac{T_{S0}-T_{Si}}{r_{0}-r_{i}}$$
 
 A análise da câmara de combustão está relacionada à temperatura de parede, afinal o sistema de arrefecimento apenas está ligado a ela através do adaptador. 
 
-De acordo com os dados disponíveis e com o conhecimento de que a câmara de combustão utilizada pela universidade é de tamanho laboratorial, muita bibliografia é existente nesse contexto, assim a base e logo conclusão da análise da temperatura de parede se deu com os seguintes gráficos abaixo. Na qual a temperatura sensível ao termopar é de 800ºC mas pela alta temperatura seu erro pode se estender em 20%, o que é comprovado pela bibliografia que revela que a temperatura na câmara disposta às mesmas condições.
+De acordo com os dados disponíveis e com o conhecimento de que a câmara de combustão utilizada pela universidade é de tamanho laboratorial, muita bibliografia é existente nesse contexto, assim a base e logo conclusão da análise da temperatura de parede se deu com os seguintes gráficos abaixo. Na qual a temperatura sensível ao termopar é de $800^{\circ}C$ mas pela alta temperatura seu erro pode se estender em 20\%, o que é comprovado pela bibliografia que revela que a temperatura na câmara disposta às mesmas condições.
 
 \subsubsection{Análise do adaptador}
 O adaptador é o fator determinante e o único conector da câmara ao sensor de forma que sua temperatura na ponta é adotada como a temperatura do sensor uma vez que são de materiais semelhantes, isto é aço inox, no caso do adaptador 304L.
 
-Assim utilizando das suas propriedades foi então feita uma simulação para determinar sua temperatura de ponta, por admiti-lo como um cilindro perfeito. De diâmetro de 19mm e com comprimento de 100mm. Assim como às propriedades dele em temperatura de 1000 ºC mais próximas encontradas na bibliografia são elas: Condutividade térmica - 21.4 W/K.m, Gradiente de condução - 25 no sentido da seção, temperatura ambiente de 30ºC. Gerando o seguinte gráfico ANSYS.
+Assim utilizando das suas propriedades foi então feita uma simulação para determinar sua temperatura de ponta, por admiti-lo como um cilindro perfeito. De diâmetro de 19mm e com comprimento de 100mm. Assim como às propriedades dele em temperatura de $1000^{\circ}C$ mais próximas encontradas na bibliografia são elas: Condutividade térmica - 21.4 W/K.m, Gradiente de condução - 25 no sentido da seção, temperatura ambiente de $30^{\circ}C$. Gerando o seguinte gráfico ANSYS.
 
 \subsubsection{Análise de temperatura no sensor}
 Como o sensor é feito majoritariamente de aço e sua massa é pequena demais, foi adotada sua temperatura como a da ponta do adaptador, dessa forma podemos assim cortar tempo em fazer contas extremamente pouco impactante no resultado final de forma que sua aplicação é apenas uma burocracia, visto que a utilização de fatores de segurança é o suficiente para a sua determinação com segurança.
 
 \subsubsection{Análise da temperatura da água}
-Após ser determinado que o líquido de arrefecimento é água, sua temperatura é facilmente determinada pela seguinte equação que resulta em 56.4ºC.
+Após ser determinado que o líquido de arrefecimento é água, sua temperatura é facilmente determinada pela seguinte equação que resulta em $56.4^{\circ}C$.
 $$ Q_{cond} = k_{t}.4.\pi.r^2.\frac{dT}{dr} \Longrightarrow Q_{cond} = k_{t}.4.\pi.r_{0}.r_{i}.\frac{T_{S0}-T_{Si}}{r_{0}-r_{i}}$$
 
 
@@ -42,18 +42,18 @@ O mecanismo da Condução de calor está associado à transferência de calor ef
 Para as geometrias cilíndrica e esférica (como no caso de escoamento de fluidos no interior de condutas cuja parede está mais quente ou mais fria), e considerando o fluxo de calor exclusivamente na direção radial, obtém-se a Equação abaixo, onde $K_{t}$ é o coeficiente de transferência térmica ,presente na Tabela 2, L é o comprimento, r o raio e T a temperatura.
 $$ Q_{cond} = -k_{t}.2\pi.r.L.\frac{dT}{dr} \Longrightarrow Q_{cond} = k_{t}.2\pi.L.\frac{T_{S0}-T_{Si}}{\ln (r_{0}-r_{i})}$$
 
-O comprimento total do tubo é de 6 m, o diâmetro interno equivale a 4 mm e a espessura a 1mm, e o valor da temperatura interna aproximadamente 50 ºC e a temperatura externa com valor em torno de 30 °C. A partir disso, concluiu-se que o valor Q equivale a 464,89 W.
+O comprimento total do tubo é de 6 m, o diâmetro interno equivale a 4 mm e a espessura a 1mm, e o valor da temperatura interna aproximadamente $50^{\circ}C$ e a temperatura externa com valor em torno de 30 °C. A partir disso, concluiu-se que o valor Q equivale a 464,89 W.
 
 \subsubsection{Material}
 Para as mangueiras e conectores da condução do líquido de arrefecimento, o material utilizado será o politetrafluoretileno (PTFE), popularmente conhecido como teflon. As principais características desse plástico fluorado é sua inércia química, estabilidade em altas e baixas temperaturas, excelentes propriedades elétricas e baixo coeficiente de atrito.
 
-As resinas de PTFE são opacas, cristalizadas e maleáveis. Quando aquecidas acima de 340ºC, tornam-se transparentes, amorfas e de tratamento relativamente difícil, sofrendo fraturas quando severamente deformadas. Ao serem resfriadas, voltam ao seu estado original. Geralmente são utilizadas em aplicações nas quais se aproveitam suas propriedades elétricas, químicas e mecânicas fora do comum, mas também em componentes de sistemas de transportes de fluidos, peças moldadas de ajuste e vedação, entre outros.\\
+As resinas de PTFE são opacas, cristalizadas e maleáveis. Quando aquecidas acima de $340^{\circ}C$, tornam-se transparentes, amorfas e de tratamento relativamente difícil, sofrendo fraturas quando severamente deformadas. Ao serem resfriadas, voltam ao seu estado original. Geralmente são utilizadas em aplicações nas quais se aproveitam suas propriedades elétricas, químicas e mecânicas fora do comum, mas também em componentes de sistemas de transportes de fluidos, peças moldadas de ajuste e vedação, entre outros.\\
 
 A alta resistência ao calor e outras características do PTFE, listadas na Tabela 1, foram os principais critérios utilizados para escolha do material.\\
 
 \caption{Tabela 01: Propiedades do PFTE}
 
-Entretanto, para o adaptador que liga a pós-câmara ao sensor de pressão é empregado o Aço Inoxidável (AISI 304L). A escolha do material foi determinada por meio das propriedades físicas e químicas, entre elas : apresenta boa resistência à corrosão e resistência à oxidação de até 850ºC , permite excelente maquinabilidade, o material é muito dúctil sendo de fácil estampagem e  embutidura.
+Entretanto, para o adaptador que liga a pós-câmara ao sensor de pressão é empregado o Aço Inoxidável (AISI 304L). A escolha do material foi determinada por meio das propriedades físicas e químicas, entre elas : apresenta boa resistência à corrosão e resistência à oxidação de até $850^{\circ}C$ , permite excelente maquinabilidade, o material é muito dúctil sendo de fácil estampagem e  embutidura.
 
 Assim a tabela 02 demonstra as principais características do AISI 304 L.
 
@@ -116,4 +116,4 @@ Dessa forma, como previsto anteriormente o projeto em questão é plausível e a
 
 \subsection{Discussões e Conclusões}
 
-Após todos esses passos, os resultados encontrados nas funções que cabiam ao grupo, após a simulação do cilindro é de 450ºC na ponta do adaptador, a temperatura da água não passa de 60ºC e o sensor sobreviverá à temperatura que se encontra no motor se o sistema de arrefecimento funcionar corretamente, realizando as medições necessárias entre os períodos de tempo do teste, sendo eles entre 15 e 60 segundos.
+Após todos esses passos, os resultados encontrados nas funções que cabiam ao grupo, após a simulação do cilindro é de $450^{\circ}C$ na ponta do adaptador, a temperatura da água não passa de $60^{\circ}C$ e o sensor sobreviverá à temperatura que se encontra no motor se o sistema de arrefecimento funcionar corretamente, realizando as medições necessárias entre os períodos de tempo do teste, sendo eles entre 15 e 60 segundos.
