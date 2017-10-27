@@ -321,12 +321,46 @@ O reservatório conta com dimensões gerais: 15 x 33 x 22 cm, e peso total (vazi
 \subsection{Riscos da estrutura}
 
 Tendo  isso em vista, foram realizadas análises de riscos envolvendo 3 partes do projeto, sendo estas: riscos do sistema de bombeamento, riscos do sistema de arrefecimento e riscos na tubulação e reservatório.
-Como medida de prevenção geral, antes do teste principal todo o sistema de refrigeração, bombeamento e tubulação serão testados previamente para, caso problemas sejam detectados, possam ser fixados sem prejuizos financeiros ou estruturais.
+Como medida de prevenção geral, antes do teste principal todo o sistema de refrigeração, bombeamento e tubulação serão testados previamente para, caso problemas sejam detectados, possam ser fixados sem prejuizos financeiros ou estruturais. Abaixo estão descritos os riscos levantados pela equipe de estrutura.
 
-\subsubsection{Riscos do sistema de bombeamento}
+\begin{table}
+    \centering
+    \begin{tabular}{|p{1cm}|p{2.2cm}|p{1.8cm}|p{3cm}|p{3cm}|p{1.7cm}|p{2cm}|}
+    \hline
+    \textbf{ID}  & \textbf{Risco} & \textbf{Tipo de Risco} & \textbf{Descrição} & \textbf{Descrição do Impacto} & \textbf{Impacto} & \textbf{Probabilidade} \\ \hline
+    R01 & Vazamento de água nas mangueiras & Técnico & A água começa a escoar das mangueiras do sistema. & O reservatório irá começar a perder a água que é o líquido de arrefecimento. & Alto & Baixa \\ \hline
+    R02 & Vazamento de água nas conexões entre os tubos & Técnico & A água começa a escoar das conexões entre os tubos do sistema. & Será perdido água que é o líquido de arrefecimento escolhido. & Alto & Baixa \\ \hline
+    R03 & Vazamento de água no reservatório & Técnico & O reservatório está escoando água de forma a perder o líquido de arrefecimento. & Será perdido água que é o líquido de arrefecimento escolhido. & Alto & Baixa \\ \hline
+    R04 & Rompimento da ligação entre os tubos e conectores & Técnico & A ligação se rompe e o sistema falha. &O sistema irá parar de realizar o bombeamento da água.  & Alto & Baixa \\ \hline
+    R05 & A bomba para de funcionar & Técnico & A bomba falha e o sistema de resfriamento para de funcionar. &O sensor chegará a uma temperatura onde os dados coletados são imprecisos e o teste será descartado.  & Alto & Baixa \\ \hline
+    R06 & Falha nos coolers de ventilação & Técnico & Se os coolers falharem o sistema de resfriamento não irá ser efetivo  & O sensor chegará a uma temperatura onde os dados coletados são imprecisos e o teste será descartado.  & Alto & Baixa \\ \hline    
+\end{tabular}
+    \caption{Análise dos riscos de estruturas}
+    \end{table} 
 
-Como parte principal de todo o sistema de refrigeração, a bomba deve ter um grau de confiabilidade muito alto pois, caso ela pare, o sensor chegará a uma temperatura onde os dados coletados são imprecisos e o teste será descartado.
-Como medida de prevenção, duas bombas serão utilizadas para, caso uma venha a falhar, o teste possa continuar. A bomba A funcionará inicialmente enquanto a B está desligada. Em caso de mal funcionamento da A, a B será ligada e o teste continuará sem interrupções. 
+
+\subsection{Prevenção e contenção dos riscos estruturais}
+
+As medidas preventivas está detalhada na tabela acima.
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|p{1cm}|p{2cm}|p{7cm}|p{2cm}|}
+        \hline
+        \textbf{ID}  & \textbf{Descrição} & \textbf{Ação} & \textbf{Prioridade} \\ \hline
+        R01, R02, R03 & Vazamentos & O sistema de bombeamento de água funcionará abaixo da sua potência máxima. Isso proporciona ao sistema a garantia de que, na ocorrência de vazamentos, o fluxo líquido da água (fluxo de saída da bomba menos o fluxo de vazamento) seja constante durante o teste. & Alta(25) \\ \hline
+        R01, R02, R03 & Vazamentos & Para garantir que o sistema não possui vazamentos, será inicializado todo o sistema de bombeamento antes do teste, afim de averiguar, no reservatório, nas conexões e ao longo da mangueira, a integridade da tubulação. & Alta(25) \\ \hline
+        R03 & Vazamentos & Tendo em vista a possibilidade de vazamentos durante o teste do foguete, será utilizado um reservatório maior que o necessário, para garantir ao sistema o mínimo de água necessária para arrefecer o sensor 6061B. & Alta(25) \\ \hline
+        R03 & Vazamentos & Caso o nível do reservatório diminua mais que o previsto durante o teste e atinja uma marca menor que 10\% da sua capacidade, o sistema será desligado e o teste desconsiderado. & Alta(25) \\ \hline        
+        R05 & A bomba falha & Como medida de prevenção, duas bombas serão utilizadas para, caso uma venha a falhar, o teste possa continuar. A bomba A funcionará inicialmente enquanto a B está desligada. Em caso de mal funcionamento da A, a B será ligada e o teste continuará sem interrupções.  & Alta(25) \\ \hline
+        R06 & Falha nas ventoinhas & Serão utilizados 4 coolers (o dobro do que acompanha os radiadores). Dessa forma além da taxa de refrigeração aumentar, a chance de que todos os coolers venham a falhar é mínima. . & Alta(25) \\ \hline
+    \end{tabular}
+\caption{Resposta aos riscos de estruturas}
+\end{table}
+
+\newpage
+
+Sobre o contorno ao risco R05, a proposta está mais detalhada abaixo.
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
@@ -336,38 +370,6 @@ Como medida de prevenção, duas bombas serão utilizadas para, caso uma venha a
 
 Para que haja a troca da bomba durante o teste, duas válvulas serão utilizadas. Uma para a saída das bombas, esta sendo livre, e uma para a entrada da bomba, esta com um servo motor. A primeira válvula ficará fechada para a bomba B e, caso a bomba A falhe, será ativado o fluxo na bomba B e a própria impulsão da bomba abrirá a válvula a fechando para a bomba A. Já na entrada do sistema, haverá um servo motor conectado ao sistema de monitoramento geral. Quando for indicada a falha na bomba, o servo se ativará e fechará o fluxo para a bomba A, abrindo, simultaneamente, para a bomba B.
 
-Como prevenção, serão utilizados fuzíveis para proteção elétrica e bombas com menos de 30.000 horas de uso, a fim de aumentar a confiabilidade do sistema.
-
-\subsubsection{Riscos do sistema de arrefecimento}
-Assim como o bombeamento d'água, a refrigeração tem um grau de importância alto. Falhas também são imperdoáveis. 
-Toda a água será refrigerada no radiador, porém o que pode vir a falhar são os coolers que o ventilam.  Como medida de prevenção serão utilizados 4 coolers (o dobro do que acompanha os radiadores). Dessa forma além da taxa de refrigeração aumentar, a chance de que todos os coolers venham a falhar é mínima. 
-De qualquer forma, caso 3 ou mais coolers parem, o nível de refrigeração abaixará e o teste será desconsiderado por sobreaquecimento do sensor.
-
-\subsubsection{Riscos da tubulação no reservatório}
-
-Alguns dos riscos técnicos presentes no projeto, tem relação com a ocorrência de falha na tubulação do sistema e no reservatório de água. Esses riscos englobam o vazamento de água nas mangueiras, nas conexões entre os tubos ou no reservatório, e o rompimento da ligação entre os tubos e os conectores.
-Para lidar com esses riscos, foram elaboradas 3 (três) medidas de prevenção e uma medida de contenção.
-
-
-\subsubsection{Prevenção e contenção dos riscos estruturais}
-
-Alguns dos riscos técnicos presentes no projeto, tem relação com a ocorrência de falha na tubulação do sistema e no reservatório de água. Esses riscos englobam o vazamento de água nas mangueiras, nas conexões entre os tubos ou no reservatório, e o rompimento da ligação entre os tubos e os conectores.
-
-As medidas preventivas serão:
-
-\begin{itemize}
-\item O sistema de bombeamento de água funcionará abaixo da sua potência máxima. Isso proporciona ao sistema a garantia de que, na ocorrência de vazamentos, o fluxo líquido da água (fluxo de saída da bomba menos o fluxo de vazamento) seja constante durante o teste.
-\item Para garantir que o sistema não possui vazamentos, será inicializado todo o sistema de bombeamento antes do teste, afim de averiguar, no reservatório, nas conexões e ao longo da mangueira, a integridade da tubulação.
-\item Tendo em vista a possibilidade de vazamentos durante o teste do foguete, será utilizado um reservatório maior que o necessário, para garantir ao sistema o mínimo de água necessária para arrefecer o sensor 6061B.
-\end{itemize}
-
-A medida de conteção é delimitada abaixo:
-
-\begin{itemize}
-\item Caso o nível do reservatório diminua mais que o previsto durante o teste e atinja uma marca menor que 10\% da sua capacidade, o sistema será desligado e o teste desconsiderado.
-\end{itemize}
-
-\newpage
 
 \subsection{Resultados pós-pesquisa para estruturas}
 
@@ -392,3 +394,5 @@ Válvulas & Válvula dupla de entrada de água - Lavadora Electrolux  & 2 & 45,0
 
 Com isso o orçamento total para a parte estrutural do projeto se dá em R\$ 447,68.
 A montagem do sistema dos materiais será realizada de acordo com a figura descrita na seção de estrutura do sistema.
+
+\newpage
