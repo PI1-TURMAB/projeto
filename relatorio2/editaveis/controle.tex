@@ -179,3 +179,16 @@ A escolha por este sensor é semelhante à escolha do sensor de fluxo. Considera
 Cabe ressaltar que o uso de um sensor de nível para o reservatório é imprescindível, pois caso ocorra um vazamento, a leitura de dados indicará um problema, visto que se trata de um sistema fechado. Desta forma, este problema poderá ser solucionado antes que erros mais graves aconteçam, afetando o funcionamento do sistema e consequentemente do sensor de pressão da Kistler.\\
 \section{Amplificação de sinais}
 A parte de amplificação de sinais é baseada na comunicação entre os sensores e o dispositivo NI 6320, que é uma placa de recolhimento de dados que utiliza o software LabVIEW para análise de dados. Entretanto, tendo em vista que a alguns sensores possuem saída na faixa de miliVolts e a partir dos parâmetros definidos pelo grupo de Processamento de Sinais, para a leitura é necessário um sinal com tensão mínima de entrada que varia entre 0.2 a 10 Volts. Portanto, é necessário um circuito amplificador de sinal entre o sensor e a placa, aumentando proporcionalmente o sinal de saída do sensor, para que a placa possa realizar uma leitura correta dos valores medidos pelo sensor.
+\begin{figure}[!htb]                   
+	\centering                          
+	\includegraphics[scale=0.3]{figuras/Figura_8.eps}
+	\caption{Circuito Amplificador}               
+\end{figure}
+\section{Análise de Dados}
+Como descrito anteriormente, a análise será feita a partir da placa NI 6320, que utilizará o software LabView para fazer a análise dos dados. Sendo assim, a parte que mais interessa para o controle do sistema, é o retorno dos dados analisados para o microcontrolador, onde de acordo com a análise, o sistema de controle executará uma ação de resposta para estabilizar o sistema.
+\section{Transferência de Dados}
+A parte de transferência de dados é definida como a parte de comunicação entre a placa e o microcontrolador. Nessa parte, a comunicação será feita de forma paralela, onde a placa enviará os dados para um computador e o computador enviará os dados para o microcontrolador de forma serial por meio de um conector USB.
+\section{Controle de Resposta:}
+A parte de controle de resposta, corresponde a parte em que o microcontrolador, após receber os dados analisados, executa um comando de resposta de acordo com os dados recebidos. Onde nesse comando será feito o controle de parâmetros como: potência das bombas d'água, velocidade de rotação das ventoinhas e válvulas de controle de fluxo.
+Considerando esses fatores, será necessário a utilização de um microcontrolador, e 3 módulos relé para a montagem do sistema de controle.
+
