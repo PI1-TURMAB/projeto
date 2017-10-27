@@ -31,3 +31,14 @@ A parte de coleta de dados será realizada pelos sensores e será a porta de ent
 	\includegraphics[scale=0.4]{figuras/Sensor1.png}
 	\caption{Sensor de Temperatura para o adaptador da câmara de combustão}               
 \end{figure}
+\subsection{Explicação:}
+	A escolha deste sensor se deve ao fato principalmente da magnitude da temperatura no adaptador que, por meio de simulações realizadas pelo grupo de transmissão de calor, alcança a faixa de até $450^o C$, na posição em que o sensor de pressão principal está localizado. Foi estabelecido um fator de segurança igual a 2, teorizando uma temperatura máxima de $900^{o}C$ no adaptador, o que dá maior margem para erros e falhas. Dessa forma, a escolha de um termopar tipo K se justifica, se for considerado a faixa de medição padrão $(-200^o C a 1250^o C)$ e a alta disponibilidade desse tipo de termopar no mercado.\\
+	A junção da bainha é do tipo aterrada, onde os fios do termopar estão em contato físico direto com o interior da parede da sonda. Isso resulta em uma relação resposta/proteção ideal para o caso analisado, já que o material utilizado é o aço, que é conhecidamente um bom condutor térmico. Comparativamente, se fosse utilizada uma junção isolada, o tempo de resposta seria mais demorado, já que entre os fios do termopar e a parede da sonda existe um isolamento que impede o contato direto entre os dois. Já para uma junção exposta o efeito seria o contrário, com um tempo de resposta mais ágil, porém os fios do termopar estariam em maior risco de serem danificados e comprometerem o sensoriamento.\\
+	Considerando também o local onde o sensor deverá ser acoplado, as dimensões do produto são apropriadas. Porém, este dimensionamento pode ser melhor adequado à situação requerida através do acessório chamado bucim, peça anelar metálica que pode ser utilizada a fim de permitir o ajuste exato da imersão da sonda no adaptador. Para isso, será necessário o furo de uma rosca na lateral superior, próximo ao encaixe do sensor de pressão da Kistler, local onde a temperatura pode ser medida com maior exatidão. Um modelo CAD feito com o software Catia V5R19 foi desenvolvido a fim de ilustrar o adaptador:
+\begin{figure}[!htb]                   
+		\centering                          
+		\includegraphics[scale=0.4]{figuras/adaptador.png}
+		\caption{Adaptador da Câmara de Combustão}               
+\end{figure}
+	
+	
