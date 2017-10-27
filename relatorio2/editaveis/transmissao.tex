@@ -23,7 +23,7 @@ De acordo com os dados disponíveis e com o conhecimento de que a câmara de com
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Camara1.eps}                        
+   \includegraphics[scale=0.6, keepaspectratio=true]{figuras/Camara1.eps}                        
 \end{figure}
 
 \subsubsection{Análise do adaptador}
@@ -31,19 +31,19 @@ O adaptador é o fator determinante e o único conector da câmara ao sensor de 
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Parte1.eps}                     
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/Parte1.eps}                     
 \end{figure}
 
 Assim utilizando das suas propriedades foi então feita uma simulação para determinar sua temperatura de ponta, por admiti-lo como um cilindro perfeito. De diâmetro de 19mm e com comprimento de 100mm. Assim como às propriedades dele em temperatura de $1000^{\circ}C$ mais próximas encontradas na bibliografia são elas: Condutividade térmica - 21.4 W/K.m, Gradiente de condução - 25 no sentido da seção, temperatura ambiente de $30^{\circ}C$. Gerando o seguinte gráfico ANSYS.
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Resultado1.eps}                     
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/Resultado1.eps}                     
 \end{figure}
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Teste14_1.eps}                       
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/Teste14.eps}                       
 \end{figure}
 
 \subsubsection{Análise de temperatura no sensor}
@@ -54,7 +54,7 @@ Após ser determinado que o líquido de arrefecimento é água, sua temperatura 
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Teste12_1.eps}                     
+   \includegraphics[scale=0.4, keepaspectratio=true]{figuras/Teste12.eps}                    
 \end{figure}
 
 $$ Q_{cond} = k_{t}.4.\pi.r^2.\frac{dT}{dr} \Longrightarrow Q_{cond} = k_{t}.4.\pi.r_{0}.r_{i}.\frac{T_{S0}-T_{Si}}{r_{0}-r_{i}}$$
@@ -106,7 +106,7 @@ Já para o tubo que conecta ao sensor é necessário um ducto de Ø =19mm por 10
 \begin{figure}[!htb]                                                               
    \centering                                                                      
    \includegraphics[keepaspectratio=true]{figuras/Template.eps}
-   \caption{Figura 01: Corte horizontal do adaptador.}                        
+   \caption{Corte horizontal do adaptador.}                        
 \end{figure}
 
 
@@ -115,14 +115,16 @@ Após a realização dos cálculos por meio de modelos matemáticos Newtonianos,
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Resultado1.eps}                      
+   \includegraphics[scale=0.5, keepaspectratio=true]{figuras/Resultado1.eps}                      
 \end{figure}
 
 Consequentemente, para a segunda etapa o software utilizado foi o ANSYS versão R18.2 Academic. Assim, para realizar o estudo termodinâmico do tubo, o qual liga a pós-câmara ao sensor de pressão é empregado o Steady-State Thermal (Estado Térmico Estacionário), entretanto para uma maior precisão é necessária a realização de um estudo em um estado transiente, que depende do menor e maior tempo de excução do motor. Com tal característica, utiliza-se como geometria um cilindro de 19 mm de diâmetro para facilitar a simulação e dessa forma não tem grandes alterações no resultado final.
 
+\newpage
+
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Resultado2.eps}                       
+   \includegraphics[scale=0.5, keepaspectratio=true]{figuras/Resultado2.eps}                       
 \end{figure}
 
 \subsection{Riscos na transmissão de calor}
