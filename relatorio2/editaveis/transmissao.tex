@@ -23,8 +23,7 @@ De acordo com os dados disponíveis e com o conhecimento de que a câmara de com
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Camara1.eps}
-   \caption{Esquemático geral do projeto de estrutura}                        
+   \includegraphics[keepaspectratio=true]{figuras/Camara1.eps}                        
 \end{figure}
 
 \subsubsection{Análise do adaptador}
@@ -32,22 +31,19 @@ O adaptador é o fator determinante e o único conector da câmara ao sensor de 
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[keepaspectratio=true]{figuras/Parte1.eps}
-   \caption{Esquemático geral do projeto de estrutura}                        
+   \includegraphics[keepaspectratio=true]{figuras/Parte1.eps}                     
 \end{figure}
 
 Assim utilizando das suas propriedades foi então feita uma simulação para determinar sua temperatura de ponta, por admiti-lo como um cilindro perfeito. De diâmetro de 19mm e com comprimento de 100mm. Assim como às propriedades dele em temperatura de $1000^{\circ}C$ mais próximas encontradas na bibliografia são elas: Condutividade térmica - 21.4 W/K.m, Gradiente de condução - 25 no sentido da seção, temperatura ambiente de $30^{\circ}C$. Gerando o seguinte gráfico ANSYS.
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[width=15cm, keepaspectratio=true]{figuras/Resultado1.eps}
-   \caption{Esquemático geral do projeto de estrutura}                        
+   \includegraphics[keepaspectratio=true]{figuras/Resultado1.eps}                     
 \end{figure}
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[width=15cm, keepaspectratio=true]{figuras/Teste14_1.eps}
-   \caption{Esquemático geral do projeto de estrutura}                        
+   \includegraphics[keepaspectratio=true]{figuras/Teste14_1.eps}                       
 \end{figure}
 
 \subsubsection{Análise de temperatura no sensor}
@@ -58,8 +54,7 @@ Após ser determinado que o líquido de arrefecimento é água, sua temperatura 
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[width=15cm, keepaspectratio=true]{figuras/Teste12_1.eps}
-   \caption{Esquemático geral do projeto de estrutura}                        
+   \includegraphics[keepaspectratio=true]{figuras/Teste12_1.eps}                     
 \end{figure}
 
 $$ Q_{cond} = k_{t}.4.\pi.r^2.\frac{dT}{dr} \Longrightarrow Q_{cond} = k_{t}.4.\pi.r_{0}.r_{i}.\frac{T_{S0}-T_{Si}}{r_{0}-r_{i}}$$
@@ -82,12 +77,21 @@ As resinas de PTFE são opacas, cristalizadas e maleáveis. Quando aquecidas aci
 
 A alta resistência ao calor e outras características do PTFE, listadas na Tabela 1, foram os principais critérios utilizados para escolha do material.\\
 
-
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[keepaspectratio=true]{figuras/Teflon.eps}
+   \caption{Tabela 01: Propiedades do PFTE}                        
+\end{figure}
 
 Entretanto, para o adaptador que liga a pós-câmara ao sensor de pressão é empregado o Aço Inoxidável (AISI 304L). A escolha do material foi determinada por meio das propriedades físicas e químicas, entre elas : apresenta boa resistência à corrosão e resistência à oxidação de até $850^{\circ}C$ , permite excelente maquinabilidade, o material é muito dúctil sendo de fácil estampagem e  embutidura.
 
 Assim a tabela 02 demonstra as principais características do AISI 304 L.
 
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[keepaspectratio=true]{figuras/Propriedades.eps}
+   \caption{Tabela 02: Propiedades do AISI 304L}                        
+\end{figure}
 
 \subsubsection{Dimensões}
 De acordo com o modelo feito para o posicionamento da bomba, os materiaisnecessários, do sistema até a chegada ao sensor serão:
@@ -99,17 +103,27 @@ De acordo com o modelo feito para o posicionamento da bomba, os materiaisnecess�
 
 Já para o tubo que conecta ao sensor é necessário um ducto de Ø =19mm por 100mm de comprimento. Dessa forma, conforme a imagem abaixo, a qual refere-se ao corte horizontal do tubo percebe-se um furo com Ø =3mm na maior parte de extensão.
 
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[keepaspectratio=true]{figuras/Template.eps}
+   \caption{Figura 01: Corte horizontal do adaptador.}                        
+\end{figure}
+
 
 \subsubsection{Simulações}
 Após a realização dos cálculos por meio de modelos matemáticos Newtonianos, é necessária a realização de simulações para que possam garantir que as operações foram efetuadas corretamente e assim, diminuir a porcentagem de erros e riscos. O software utilizado foi o ANSYS versão R18.1 Academic.
 
 \begin{figure}[!htb]                                                               
    \centering                                                                      
-   \includegraphics[width=15cm, keepaspectratio=true]{figuras/Resultado1.eps}
-   \caption{Esquemático geral do projeto de estrutura}                        
+   \includegraphics[keepaspectratio=true]{figuras/Resultado1.eps}                      
 \end{figure}
 
 Consequentemente, para a segunda etapa o software utilizado foi o ANSYS versão R18.2 Academic. Assim, para realizar o estudo termodinâmico do tubo, o qual liga a pós-câmara ao sensor de pressão é empregado o Steady-State Thermal (Estado Térmico Estacionário), entretanto para uma maior precisão é necessária a realização de um estudo em um estado transiente, que depende do menor e maior tempo de excução do motor. Com tal característica, utiliza-se como geometria um cilindro de 19 mm de diâmetro para facilitar a simulação e dessa forma não tem grandes alterações no resultado final.
+
+\begin{figure}[!htb]                                                               
+   \centering                                                                      
+   \includegraphics[keepaspectratio=true]{figuras/Resultado2.eps}                       
+\end{figure}
 
 \subsection{Riscos na transmissão de calor}
 
