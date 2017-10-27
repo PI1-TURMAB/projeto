@@ -265,3 +265,27 @@ Os módulos relé funcionam como uma chave magnética, onde o sinal digital que 
 Será necessário a utilização de dois módulos desse modelo, visto que um controlará 4 ventoinhas, e o outro controlará duas válvulas hidráulicas, cada uma com dois servos motores. Sendo assim, considerando a utilização e a organização do sistema, a escolha torna-se adequada e prudente.\\
 \section{Orçamento}
 Na tabela a seguir, estão especificados as quantidades e o preço unitário de cada componente especificado, onde o motivo de duplicata é devido ao fato de se ter um sistema de redundância embutido no sistema, para caso ocorra alguma falha ou emergência. Sendo assim, considerando todos os componentes no que se diz respeito a parte de monitoramento e controle do sistema, o preço final do projeto ficou orçado em R\$ 634,90, sendo considerado apenas o custo com os componentes.
+\section{Riscos}
+\centering
+\begin{table}[!htb]
+	\centering
+	\caption{Tabela de riscos}
+	\begin{tabular}{|p{1.5em}|p{4.215em}|p{7em}|p{6.285em}|p{6.07em}|p{3.845em}|p{4.215em}|}
+		\toprule
+		\textbf{ID} & \textbf{Risco} & \textbf{Tipo do Risco} & \textbf{Descrição} & \textbf{Descrição do Impacto} & \textbf{Impacto} & \textbf{Probabi- lidade} \\
+		\midrule
+		\rowcolor[rgb]{ .851,  .851,  .851} R01   & Equipe Grande & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Equipe possui membros em excesso & Atrapalha o planejamento ocasionando atrasos no projeto & Alto  & Alta \\
+		\midrule
+		R02   & Falha na comunicação & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Integrantes não se comunicam devidamente & Ocasiona definições insatisfatórias e má integração do grupo & Alto  & Média \\
+		\midrule
+		\rowcolor[rgb]{ .851,  .851,  .851} R03   & Falta de integrantes engajados no projeto & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Desinteresse de parte da equipe & Atrapalha no cumprimento de prazos e na busca por soluções efetivas & Alto  & Alta \\
+		\midrule
+		R04   & Impossibi- lidade de reuniões presenciais & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Dificuldade de combinar horários de todos os integrantes do grupo & Atrapalha no desenvolvimento, discussões e definições do projeto & Alta  & Baixa \\
+		\midrule
+		\rowcolor[rgb]{ .851,  .851,  .851} R05   & Falha no sensor de nível no reservatório & \textcolor[rgb]{ .141,  .161,  .18}{Técnico} & Medição com valores muito diferentes do esperado ou a não medição & Causa uma estimativa errônea sobre o volume de água no reservatório & Médio & Muito Baixa \\
+		\midrule
+		R06   & Falha no sensor de temperatura do reservatório(ST1) & \textcolor[rgb]{ .141,  .161,  .18}{Técnico} & Medição com valores muito diferentes do esperado ou a não medição & Ocasiona uma resposta errônea do sistema de arrefecimento & Médio &  Muito Baixa \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
