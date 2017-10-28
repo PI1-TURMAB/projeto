@@ -306,17 +306,9 @@ Na tabela a seguir, estão especificados as quantidades e o preço unitário de 
 		\toprule
 		\textbf{ID} & \textbf{Risco} & \textbf{Tipo do Risco} & \textbf{Descrição} & \textbf{Descrição do Impacto} & \textbf{Impacto} & \textbf{Probabi- lidade} \\
 		\midrule
-		\rowcolor[rgb]{ .851,  .851,  .851} R01   & Equipe Grande & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Equipe possui membros em excesso & Atrapalha o planejamento ocasionando atrasos no projeto & Alto  & Alta \\
+		\rowcolor[rgb]{ .851,  .851,  .851} R01   & Falha no sensor de nível no reservatório & \textcolor[rgb]{ .141,  .161,  .18}{Técnico} & Medição com valores muito diferentes do esperado ou a não medição & Causa uma estimativa errônea sobre o volume de água no reservatório & Médio & Muito Baixa \\
 		\midrule
-		R02   & Falha na comunicação & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Integrantes não se comunicam devidamente & Ocasiona definições insatisfatórias e má integração do grupo & Alto  & Média \\
-		\midrule
-		\rowcolor[rgb]{ .851,  .851,  .851} R03   & Falta de integrantes engajados no projeto & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Desinteresse de parte da equipe & Atrapalha no cumprimento de prazos e na busca por soluções efetivas & Alto  & Alta \\
-		\midrule
-		R04   & Impossibi- lidade de reuniões presenciais & \textcolor[rgb]{ .141,  .161,  .18}{Gerenciamento de Projetos} & Dificuldade de combinar horários de todos os integrantes do grupo & Atrapalha no desenvolvimento, discussões e definições do projeto & Alta  & Baixa \\
-		\midrule
-		\rowcolor[rgb]{ .851,  .851,  .851} R05   & Falha no sensor de nível no reservatório & \textcolor[rgb]{ .141,  .161,  .18}{Técnico} & Medição com valores muito diferentes do esperado ou a não medição & Causa uma estimativa errônea sobre o volume de água no reservatório & Médio & Muito Baixa \\
-		\midrule
-		R06   & Falha no sensor de temperatura do reservatório(ST1) & \textcolor[rgb]{ .141,  .161,  .18}{Técnico} & Medição com valores muito diferentes do esperado ou a não medição & Ocasiona uma resposta errônea do sistema de arrefecimento & Médio &  Muito Baixa \\
+		R02   & Falha no sensor de temperatura do reservatório(ST1) & \textcolor[rgb]{ .141,  .161,  .18}{Técnico} & Medição com valores muito diferentes do esperado ou a não medição & Ocasiona uma resposta errônea do sistema de arrefecimento & Médio &  Muito Baixa \\
 		\bottomrule
 	\end{tabular}
 	\caption{Tabela de riscos}
@@ -330,15 +322,9 @@ Na tabela a seguir, estão especificados as quantidades e o preço unitário de 
 		\toprule
 		\textbf{ID} & \textbf{Descrição} & \textbf{Ação} & \textbf{Prioridade} \\
 		\midrule
-		\rowcolor[rgb]{ .851,  .851,  .851} R02   & Integrantes não se comunicam devidamente & Incentivo maior à comunicação, mudança de meio de comunicação. & Média \\
+		R01   & Medição com valores muito diferentes do esperado, ou a não medição da água no reservatório & Verificar via sensor de fluxo se está ocorrendo alguma medição não-esperada. Se sim, parar o teste e substituir o sensor. & Baixa \\
 		\midrule
-		R03   & Desinteresse de parte da equipe & Conversar para tentar recuperar esses membros. Em pior caso, reportar ao professor. & Alta \\
-		\midrule
-		\rowcolor[rgb]{ .851,  .851,  .851} R04   & Dificuldade de combinar horários de todos os integrantes do grupo & Reuniões mais frequentes entre os membros de um setor, e entre os líderes de cada setor. & Média \\
-		\midrule
-		R05   & Medição com valores muito diferentes do esperado, ou a não medição da água no reservatório & Verificar via sensor de fluxo se está ocorrendo alguma medição não-esperada. Se sim, parar o teste e substituir o sensor. & Baixa \\
-		\midrule
-		\rowcolor[rgb]{ .851,  .851,  .851} R06   & Medição com valores muito diferentes do esperado, ou a não medição da temperatura no sensor ST1 & Verificar a temperatura medida em ST3. Caso esteja muito acima do esperado interromper o teste. Trocar o sensor, caso necessário. & Baixa \\		
+		\rowcolor[rgb]{ .851,  .851,  .851} R02   & Medição com valores muito diferentes do esperado, ou a não medição da temperatura no sensor ST1 & Verificar a temperatura medida em ST3. Caso esteja muito acima do esperado interromper o teste. Trocar o sensor, caso necessário. & Baixa \\		
 		\bottomrule
 	\end{tabular}
 \end{table}
