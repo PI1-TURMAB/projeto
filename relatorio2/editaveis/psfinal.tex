@@ -1,0 +1,66 @@
+\section{Processamento de sinais}
+
+A construção do Software responsável pelo processamento de sinais foi feito utilizando o programa LabVIEW que é um software de engenharia de sistemas criado especificamente para aplicações que envolvam teste, medição e controle, com rápido acesso ao hardware e a informações obtidas a partir dos dados.
+A construção de sistemas utilizando o LabVIEW é feita utilizando blocos, onde cada bloco desempenha uma função específica e se relaciona com outros blocos de acordo com a construção do diagrama.
+Segue abaixo o diagrama que será utilizado na placa já especificada para fazer o processamento de sinais e garantir que o sistema terá o comportamento correto. Para melhor compreensão do diagrama, ele será descrito por partes.
+
+\subsection{Temperatura}
+
+\begin{figure}[!htb]                                                               
+    \centering                                                                      
+    \includegraphics[scale=0.6, keepaspectratio=true]{figuras/labview_1.eps} 
+    \caption{Diagrama }
+ \end{figure}
+ \newpage\begin{figure}[!htb]  
+
+ Na imagem acima, o primeiro bloco, Sinal de temperatura é responsável por simular a entrada de temperatura, que será coletada e fornecida pelo sistema elaborado pelo equipe de controle, o bloco seguinte é o TemperaturaGraph, ele mostra os resultados coletados na tela de controle do sistema. A seguir existe o bloco do Conversor, que manda um valor do tipo double para o bloco seguinte. Por fim, o bloco Array max \& Min pega o valor máximo e mínimo do array recebido, pois para o sistema em questão só é relevante o valor máximo para ser comparado com o valor máximo aceitável em relação à temperatura.
+O bloco com um “relógio” é um delay aplicado de 100(ms). Por fim, o bloco Temperatura máxima insere o valor máximo, digitado pelo usuário, aceitável pelo sistema para ser verificado no bloco de comparação.
+
+\subsection{Fluxo}
+
+
+\begin{figure}[!htb]                                                               
+    \centering                                                                      
+    \includegraphics[scale=0.6, keepaspectratio=true]{figuras/labview_1.eps} 
+    \caption{Diagrama }
+ \end{figure}
+ \newpage\begin{figure}[!htb]  
+
+O bloco inicial desta parte do diagrama é o Sinal de fluxo, ele vai gerar os valores que simulam o fluxo de água coletados pelo time de controle. Em seguida existe o bloco FluxoGraph, que mostra os resultados coletados no painel que interage com o usuário.
+    Assim como no tópico anterior, existe um Conversor que transforma os valores coletados para o tipo double. O bloco  Array Max \& Min pega o maior valor do array repassado pelo bloco anterior e compara com o valor mínimo aceitável.
+    A comparação por fim é feita com o Fluxo mínimo na bomba 1 com os blocos descritos acima, caso o valor seja inferior ou igual o valor informado pelo usuário o sistema liga uma bomba secundária para garantir que o sistema não terá problemas.
+
+\subesection{Dispositivos}
+
+\begin{figure}[!htb]                                                               
+    \centering                                                                      
+    \includegraphics[scale=0.6, keepaspectratio=true]{figuras/labview_1.eps} 
+    \caption{Diagrama }
+ \end{figure}
+ \newpage\begin{figure}[!htb] 
+
+O bloco Iniciar leitura, é responsável pela interação com o usuário para que seja possível iniciar e pausar o sistema. As três letras F representam valores booleanos que também fazem parte da interação com o usuário.
+    Bundle e Dispositivos são os blocos finais que servem para interação com a interface de usuário.
+
+\subsection{Diagrama completo}
+
+\begin{figure}[!htb]                                                               
+    \centering                                                                      
+    \includegraphics[scale=0.6, keepaspectratio=true]{figuras/labview_1.eps} 
+    \caption{Diagrama }
+ \end{figure}
+ \newpage\begin{figure}[!htb] 
+
+Após descrever cada parte do diagrama, segue abaixo ele completo:
+
+
+\subsection{Interface de usuário criada no LabView}
+
+A imagem abaixo representa a tela que será apresentada ao usuário de forma que se possa utilizar o software.
+
+\begin{figure}[!htb]                                                               
+    \centering                                                                      
+    \includegraphics[scale=0.6, keepaspectratio=true]{figuras/labview_1.eps} 
+    \caption{Diagrama }
+ \end{figure}
+ \newpage\begin{figure}[!htb] 
