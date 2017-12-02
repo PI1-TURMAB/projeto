@@ -2,39 +2,6 @@
 \section{Processamento de sinais}
 
 
-O projeto da equipe de processamento de sinais consiste no recebimento dos dados enviados pela placa \textit{NI 6320}, processamentos dos valores fornecidos e, por meio de uma interface gráfica de controle, dar ao operador a decisão de qual o comportamento o sistema deve tomar.
-
-\subsection{Levantamento dos materiais}
-
-É possível fazer a mesma operação de processamento de sinais com placas como:
-\begin{itemize}
-    \item Arduino
-    \item Raspberry Pi
-    \item NI 6320
-    
-\end{itemize}
-
-A escolha da placa NI 6320, se da pelas facilitações para sistemas de arrefecimento, descritas em seu manual. Estas placas são indicadas para aplicações de controle a automação de medição. O que justifica a funcionalidade desejada no projeto a ser desenvolvido.
-
-
-Abaixo segue uma tabela descritiva de tal placa.
-
-    \begin{table}[htb]
-        \centering
-        \begin{tabular}{|p{3cm}|p{3cm}|}
-        \hline
-        NI 6320  & \\ \hline
-        Preço(R\$) & R\$ 2,470.00 \\ \hline
-        Cliente já possui? & Possui \\ \hline
-        Implementação da solução & Software de apoio e fornecimento dos dados já implementados\\ \hline
-        \end{tabular}
-        \caption{Detalhamento da placa NI 6320}
-        \end{table}
-
-
-Devido ao cliente já possuir um exemplar para uso e a placa possuir muitas facilidades para o tipo de projeto que será desenvolvido por possuir um conversor analógico-digital com uma boa resolução (12 bits/Sample) e uma taxa de amostragem de 250kS/s, a placa \textit{NI 6320} apresenta melhores opções para o projeto.
-A placa \textit{NI 6320} também pode ser utilizada com o software \textit{LabView}, o qual será utilizado para implementação do software ,que facilita na implementação de soluções com as características presentes no projeto.
-
 \subsection{Construção do Software}
 
 A construção do Software responsável pelo processamento de sinais foi feito utilizando o programa LabVIEW que é um software de engenharia de sistemas criado especificamente para aplicações que envolvam teste, medição e controle, com rápido acesso ao hardware e a informações obtidas a partir dos dados.
@@ -69,14 +36,13 @@ O bloco inicial desta parte do diagrama é o Sinal de fluxo, ele vai gerar os va
 
 \begin{figure}[!htb]                                                               
     \centering                                                                      
-    \includegraphics[scale=0.6, keepaspectratio=true]{figuras/detalhado/_bundle.eps} 
+    \includegraphics[scale=0.4, keepaspectratio=true]{figuras/detalhado/_bundle.eps} 
     \caption{Diagrama de blocos de dispositivos}
  \end{figure}
 
 O bloco Iniciar leitura, é responsável pela interação com o usuário para que seja possível iniciar e pausar o sistema. As três letras F representam valores booleanos que também fazem parte da interação com o usuário.
     Bundle e Dispositivos são os blocos finais que servem para interação com a interface de usuário.
 
-\newpage
 \subsubsection{Diagrama de blocos completo}
 \begin{figure}[!htb]\label{completo}                                                         
     \centering                                                                      
