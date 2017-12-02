@@ -40,7 +40,7 @@ Considerando então os requisitos necessários para o bom funcionamento do siste
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.5]{figuras/Sensor1.eps}
-	\caption{ Sensor de Temperatura para o adaptador da câmara de combustão }             
+	\caption{ Sensor de Temperatura para o adaptador da câmara de combustão } \label{figsensor1}        
 \end{figure}
 
 \begin{table}[!h]
@@ -61,7 +61,7 @@ Segundo o Manual Técnico de Temperatura da empresa OMEGA, o tempo de resposta d
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=1.0]{figuras/Figura3.eps}
-	\caption{Fonte: Manual Técnico de Temperatura}             
+	\caption{Fonte: Manual Técnico de Temperatura} \label{figmtt}  
 \end{figure}
 
 \newpage
@@ -72,7 +72,7 @@ Segundo o Manual Técnico de Temperatura da empresa OMEGA, o tempo de resposta d
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.5]{figuras/Figura4.eps}
-	\caption{ Sensor de Temperatura para a tubulação e para o reservatório }             
+	\caption{ Sensor de Temperatura para a tubulação e para o reservatório } \label{figsensor2}           
 \end{figure}
 
 \begin{table}[]
@@ -97,7 +97,7 @@ Outros fatores cruciais para a escolha desse sensor para essas duas áreas foram
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.3]{figuras/Figura_5.eps}
-	\caption{ Sensor de Pressão para a tubulação}             
+	\caption{ Sensor de Pressão para a tubulação} \label{figsensor3}          
 \end{figure}
 
 \begin{table}[!h]
@@ -118,7 +118,7 @@ A presença desse sensor baseia-se no fato de que um aumento significativo de pr
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.5]{figuras/Figura6.eps}
-	\caption{ Sensor de Fluxo para a tubulação}             
+	\caption{ Sensor de Fluxo para a tubulação}   \label{figsensor4}          
 \end{figure}
 
 \begin{table}[!h]
@@ -139,7 +139,7 @@ Este sensor de fluxo ficará posicionado na tubulação do sistema. Seu principa
 \begin{figure}[!h]                  
 	\centering                          
 	\includegraphics[scale=0.2]{figuras/Figura_7.eps}
-	\caption{ Sensor de Nível para o reservatório}             
+	\caption{ Sensor de Nível para o reservatório}   \label{figsensor5}       
 \end{figure}
 
 \begin{table}[!h]
@@ -203,7 +203,7 @@ O projeto de amplificação dos sinais utilizou o seguinte amplificador instrume
 \begin{figure}[!h]                  
 	\centering                          
 	\includegraphics[scale=0.5]{figuras/IMG1.eps}
-	\caption{ Amplificador instrumental}             
+	\caption{ Amplificador instrumental}  \label{figamp1}           
 \end{figure}
 
 A equação que relaciona a tensão de saída e a de entrada é dada pela seguinte expressão:
@@ -263,18 +263,166 @@ Desta forma, segue abaixo o circuito projetado e simulado, no software Proteus 8
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.6]{figuras/circ1.eps}
-	\caption{ Simulação Circuito Amplificador 2 }             
+	\caption{ Simulação Circuito Amplificador 2 }  \label{figamp2}           
 \end{figure}
 
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.5]{figuras/circ2.eps}
-	\caption{ Simulação Circuito Amplificador 2 – Tensão Máxima }             
+	\caption{ Simulação Circuito Amplificador 2 – Tensão Máxima } \label{figamp21}                
 \end{figure}
 
 \begin{figure}[!htb]                  
 	\centering                          
 	\includegraphics[scale=0.45]{figuras/circ3.eps}
-	\caption{ Simulação Circuito Amplificador 2 – Tensão Mínima }             
+	\caption{ Simulação Circuito Amplificador 2 – Tensão Mínima }   \label{figamp22}              
 \end{figure}
 
+
+\begin{itemize}
+    \item \textbf{Esquemáticos do Sistema de Controle}
+\end{itemize}
+Um esquemático é uma forma demonstração visual que possibilita uma visão mais concreta de como um projeto será construído. Sendo assim, tendo em vista que as definições dos produtos e componentes está concluída, será demonstrado a seguir todas as ligações e o funcionamento dos componentes que serão controlados pelo sistema a partir do software de simulações esquemáticas Fritzing.
+
+\textbf{Componentes utilizados:}
+\begin{itemize}
+    \item 1 Arduino Uno
+    \item 1 Módulo relé de 2 canais;
+    \item 2 Módulos relé de 4 canais;
+    \item 2 Bombas de água;
+    \item 2 Válvulas duplas de água;
+    \item 2 Ventoinhas;
+    
+\end{itemize}
+
+\textbf{Microcontrolador:}
+\begin{itemize}
+    \item \textbf{Especificações:} O microcontrolador escolhido para o projeto foi o Arduino Uno Rev3, seu componente principal é o microcontrolador ATMEL ATMEGA328, um dispositivo de 8 bits da família AVR com arquitetura RISC avançada e com encapsulamento DIP28. Ele conta com 32 KB de Flash (mas 512 Bytes são utilizados pro bootloader), 2 KB de RAM e 1 KB de EEPROM. Pode operar a até 20 MHz, porém na placa Arduino UNO opera em 16 MHz. Quando o cabo USB é plugado a um PC por exemplo, a tensão não precisa ser estabilizada pelo regulador de tensão. Dessa forma a placa é alimentada diretamente pela USB.
+    \item \textbf{Entradas e Saídas:} A placa Arduino UNO possui pinos de entrada e saídas digitais, assim como pinos de entradas e saídas analógicas.
+
+    \begin{figure}[t]                  
+        \centering                          
+        \includegraphics[scale=0.8]{figuras/ard1.eps}
+        \caption{ Pinos de entrada e saída no Arduino UNO R3 }  \label{figard1}               
+    \end{figure}
+    
+    Conforme exibido na figura abaixo, a placa Arduino UNO possui 14 pinos que podem ser usados como entrada ou saída digitais. Estes Pinos operam em 5 V, onde cada pino pode fornecer ou receber uma corrente máxima de 40 mA. Cada pino possui resistor de pull-up interno que pode ser habilitado por software. Alguns desse pinos possuem funções especiais. Figura 1: Pinos de entrada e saída no Arduino UNO R3 Contudo, em nosso projeto iremos apenas utilizar as de pwm e as analogicas.
+    PWM portas : 3,5,6,9,10 e 11; podem ser usados como saídas PWM de 8 bits através da função analogWrite();
+    
+    \item \textbf{Funcionamento:} O PWM, ou modulação de largura de pulso é uma técnica que nos permite ajustar o valor médio da tensão que está indo para o dispositivo eletrônico, ligando e desligando a potência a uma velocidade rápida. A tensão média depende do ciclo de trabalho, ou a quantidade de tempo em que o sinal está LIGADO versus a quantidade de tempo em que o sinal está DESLIGADO em um único período de tempo.
+
+    \begin{figure}[hb]                  
+        \centering                          
+        \includegraphics[scale=1]{figuras/pwm1.eps}
+        \caption{ Gráfico PWM }   \label{figpwm}              
+    \end{figure}
+    
+\end{itemize}
+\newpage
+\textbf{Válvulas:}
+\begin{itemize}
+    \item \textbf{Especificações:} A válvula escolhida para o projeto é uma solenoide dupla Eletrolux. Ele nada mais é do que uma válvula eletromecânica controlada. Ela recebe o nome de solenóide devido ao seu componente principal ser uma bobina elétrica com um núcleo ferromagnético móvel no centro, sendo este núcleo chamado de êmbolo. Em uma posição de repouso, o êmbolo tampa um pequeno orifício por onde é capaz de circular um fluido. 
+    Quando uma corrente elétrica circula através da bobina, esta corrente cria um campo magnético que por sua vez exerce uma força no êmbolo. Como resultado, o êmbolo é puxado em direção ao centro da bobina de modo que o orifício se abre.
+    
+    \item \textbf{Funcionamento:} As válvulas serão conectadas aos módulos relé na saída Normalmente Aberta e a fonte de 220V, que as alimentará, estará conectada na entrada de corrente do relé. Quando o relé for ativado pelo Arduino a fonte de 220V começa a funcionar e, assim, uma corrente elétrica circulará através da bobina. Esta corrente cria um campo magnético que por sua vez exerce uma força no êmbolo. Como resultado, o êmbolo é puxado em direção ao centro da bobina de modo que o orifício se abre liberando a passagem do líquido.
+    
+\end{itemize}
+
+\textbf{Bombas:}
+\begin{itemize}
+    \item \textbf{Especificações:} O modelo da bomba escolhido foi o DC30QA-1230, trabalha com uma voltagem de 4.5Vdc a 12 Vdc e corrente máxima de 350mA. A bomba funciona por meio de um motor CC, que um motor alimentado por corrente contínua, sendo esta alimentação proveniente de uma bateria ou qualquer outra de alimentação CC. A sua troca de energia entre rotor e estator é sem escovas (brushless) e com relação a velocidade, o motor cc pode ser controlado apenas variando a sua tensão, diferentemente de um motor elétrico de corrente alternada (CA) cuja a velocidade é variada pela frequência. Os polos indicam a direção que o motor irá girar.
+
+    \item \textbf{Funcionamento:} As Bombas serão conectadas aos módulos relé na saída Normalmente Aberta e a fonte de 12V, que as alimentará, estará conectada na entrada de corrente do relé. Quando o relé for ativado pelo arduino a fonte de 12V começa a funcionar e, assim, alimentará as bombas, fazendo-as funcionar. Os controles de qual estará ligada e sua velocidade será feita pelo Microcontrolador.
+
+\end{itemize}
+\newpage
+\textbf{Módulos Relés:}
+\begin{itemize}
+    \item \textbf{Especificações:} O módulo relé é utilizado no controle do acionamento de cargas, onde nesse caso, possuem potência maior que a disponibilizada pela placa de processamento. O número de canais indica quantas cargas ou componentes são possíveis controlar por um único módulo.
+
+    \item \textbf{Entradas, Saídas e Funcionamento:} O controle do relé é feito por meio da corrente que, neste projeto, virá de uma das saídas digitais do arduino. Dependendo da posição do jumper nas conexões de entrada do módulo (JD-Vcc e Vcc no lado oposto aos relés), pode-se usar somente a alimentação de 5V do arduino para alimentar o circuito por inteiro. Se retirarmos esse jumper uma outra fonte de energia de 5V será necessária para alimentar o relé.
+    
+    Para controlá-los, devemos conectar uma saída de 5V do arduino no Vcc do módulo onde podemos encontrar quatro pinos. Nos outros três pinos desta parte deve-se conectar o terra (GND) do arduino e duas saídas digitais (IN1 e IN2) que controlarão cada um dos relés do módulo. Pode-se notar que cada relé possui 3 parafusos ou bornes, neste caso totalizando 6 bornes. A corrente entra no borne central de cada relé e os outros dois bornes Normalmente Aberto (NA) e 
+    
+    Normalmente Fechado (NF) são de escolha do projetista. Se o fio que leva ao componente for conectado no borne NA. quando o relé estiver ligado o componente receberá corrente. Caso conectado no borne NF, o funcionamento será oposto, ligando o componente quando o relé estiver desligado e desligando quando ele for ligado no arduino.
+    
+    Para um módulo com mais canais, o funcionamento é o mesmo, tanto na questão da alimentação quanto na questão do controle, sendo que a única diferença é a quantidade de canais disponíveis para controle de cargas ou aparelhos, sendo que a forma como o controle é feita é da mesma maneira.
+
+    \begin{figure}[hb]                  
+        \centering                          
+        \includegraphics[scale=0.6]{figuras/rele1.eps}
+        \caption{ Módulo Relé de 2 Canais }   \label{figrele1}              
+    \end{figure}
+
+\end{itemize}
+\newpage
+\textbf{Ventoinhas:}
+\begin{itemize}
+    \item \textbf{Especificações:} A ventoinha escolhida para refrigerar o radiador que reduzirá a temperatura da água possui velocidade de rotação de aproximadamente 2000 RPM +- 10\%, trabalha com 12V e 0.35A de corrente, tendo conexão de 3 pinos que controla a rotação, alimentação e funcionamento do LED das pás.
+
+    \item \textbf{Entradas e Funcionamento:} Por ter apenas três pinos em sua conexão, o cooler tem sua velocidade fixa, padronizada que não é o caso de coolers com quatro pinos. Cada pino leva a um fio e cada fio tem sua função. O fio preto é o terra que irá no negativo da fonte de 12V e o fio vermelho é o positivo de alimentação que irá diretamente no relé na saída Normalmente Aberta do relé, já o amarelo identifica a quantidade de voltas (RPM) do cooler e é conectado diretamente ao arduino em uma das entradas digitais. O positivo da fonte de 12V irá na entrada de corrente do relé.
+\end{itemize}
+
+\textbf{Esquemáticos:}
+A imagem abaixo mostra uma visão geral de todas as conexões realizada pelo Microcontrolador "Arduino uno”. As cores dos fios indicam a voltagem:
+\begin{itemize}
+    \item Preto: GND 5V ou Neutros 
+    \item Vermelho: VCC 5V 
+    \item Verde: 12V 
+    \item Azul: 220V
+\end{itemize}
+
+\begin{figure}[hb]                  
+    \centering                          
+    \includegraphics[scale=0.6]{figuras/siscontrole.eps}
+    \caption{ Esquemático Geral Sistema de Controle }   \label{figsiscontrole}              
+\end{figure}
+\newpage
+\begin{itemize}
+    \item \textbf{Bombas 1 e 2:} As conexões das bombas de água são realizadas por meio de um módulo relé de 2 canais, ligados a uma fonte de 12V, juntamente dos pinos 11 e 10 do microcontrolador que são saídas de PWM para a regulação da velocidade dos motores da bomba.
+    \begin{figure}[hb]                  
+        \centering                          
+        \includegraphics[scale=0.7]{figuras/bomb12.eps}
+        \caption{ Esquemático Bombas 1 e 2 }   \label{figbomb12}              
+    \end{figure}      
+
+    \item \textbf{Válvulas de Entrada e Saída:} As conexões das Válvulas de água são realizadas por meio de um módulo relé de 4 canais, ligados a uma fonte de 220V ou 110V, dependendo da bobina que se encontra na válvula.
+    Para elas são usados os pinos analógicas A0,A1,A2,A3 pois podem ser transformados em digitais, além de que a válvula não necessita de um PWM para controlar a abertura das válvulas.
+    
+    \begin{figure}[hb]                  
+        \centering                          
+        \includegraphics[scale=0.7]{figuras/valv1.eps}
+        \caption{ Esquemáticos Válvulas 1 e 2 }   \label{figvalv12}              
+    \end{figure} 
+    \newpage
+    \item \textbf{Ventoinhas:} As conexões das Ventoinhas são realizadas por meio de um módulo relé de 4 canais, ligados a uma fonte de 12V. Para ela são usados os pinos de PWM 3,5,6,7 pois necessitam que suas velocidades sejam reguladas.
+
+    \begin{figure}[hb]                  
+        \centering                          
+        \includegraphics[scale=0.7]{figuras/vent1234.eps}
+        \caption{ Esquemáticos Ventoinhas 1, 2, 3 e 4 }   \label{figvent1234}              
+    \end{figure} 
+
+\end{itemize}
+\newpage
+\textbf{Bill of Materials (BOM):} 
+
+\begin{figure}[ht]                                          
+    \includegraphics[scale=0.8]{figuras/bom.eps}
+    \caption{ Diagrama Bill Of Materials }   \label{figbom}              
+\end{figure} 
+
+O sistema de controle é composto por 3 etapas distintas, o controle de temperatura, o controle de pressão e o controle do fluxo, sendo que todas elas possuem componentes específicos por área, e que atuam de maneira paralela para o funcionamento do todo, sendo interligadas pela placa de processamento para controle, como mostra na figura acima.
+
+O controle de temperatura é dividido pelo subsistemas de: monitoramento de temperatura e controle de temperatura. O monitoramento é feito por três sensores de temperatura. Já o controle é feito a partir da placa de processamento que controla o acionamento de quatro ventoinhas por um módulo auxiliar.
+
+O controle de pressão é composto pelo subsistema de monitoramento de pressão, sendo realizado por um sensor de pressão.
+
+O controle de fluxo é dividido em subsistemas de: monitoramento de fluxo e controle de fluxo. Sendo que o monitoramento é feito por um sensor de fluxo, já o controle é realizado pela placa de processamento que controla duas bombas e duas válvulas por meio de módulos auxiliares, dependendo das condições do sistema.
+
+Todos os componentes de cada etapa do sistema serão obtidos via fornecedores externos, e estão listados na tabela abaixo:
+
+\begin{figure}[ht]                                          
+    \includegraphics[scale=0.7]{figuras/bom1.eps}
+    \caption{ Tabela Bill Of Materials }   \label{figbom1}              
+\end{figure} 
