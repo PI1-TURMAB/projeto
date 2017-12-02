@@ -52,3 +52,113 @@ Sua capacidade térmica é bem elevada quando comparada com outras substâncias 
 A água é um liquido em abundância e que pode ser facilmente encontrado. O litro de aguá mineral, que possui poucas impurezas, é cerca de um real e, a água destilada pode ser encontrada a R\$1,95 o litro [3]. Portanto, é um líquido de arrefecimento com pontos econômicos muito positivos.
 
 \subsubsection{Tubulação}
+\paragraph{Tamanho}
+É necessário um correto dimensionamento da sala onde se encontra o equipamento, ou seja:
+\begin{itemize}
+\item Posição do sensor na bancada de teste (Conhecido).
+\item Posição do sistema de arrefecimento (Conhecido – 3 Opções).
+\end{itemize}
+
+\paragraph{Material}
+
+O material escolhido para a tubulação é o politetrafluoretileno (PTFE), família dos fluoroplásticos (PTFE, FEP, PFA, CTFE, ECTFE, ETFE, PVDF), que são resinas termoplásticas de estrutura principal parafínica que têm alguns ou todos os seus hidrogênios substituídos por átomos de flúor $(C_{2}F_{4})_{n}$. Caracteriza-se por excelentes propriedades dielétricas e resistência química, baixo coeficiente de atrito e excepcional estabilidade em elevadas temperaturas, resistência mecânica baixa ou moderada, custo elevado.
+
+O material foi escolhido por possuir excelentes propriedades, que são indispensáveis para o transporte do fluido de arrefecimento, bem como por contar com boa margem de segurança, já que todas as propriedades do material são superiores às necessitadas no projeto.
+
+\begin{itemize}
+\item 	Temperatura de trabalho: possuem uma das mais amplas faixas de temperatura de trabalho, desde $-90^{\circ}C$ até $+240^{\circ}C$, em regime contínuo. A melhor opção em mangueiras para trabalho com vapor superaquecido.
+\item Deslizamento sem atrito: com baixo coeficiente de atrito, são particularmente indicados em sistemas mecânicos que apresentam dificuldade de lubrificação periódica.
+\item Resistência à água e intempéries: são altamente hidrorrepelentes, apresentando absorção de umidade praticamente nula. Resiste aos raios solares, variações de umidade relativa do ar e da temperatura ambiente. 
+\item Baixa aderência: por ser antiaderente, o PTFE é o polímero adequado para tubos e mangueiras que conduzem líquidos viscosos e adesivos. 
+\end{itemize}
+
+Além disso, o material possui excelente custo benefício, visto que o comprimento da tubulação é relativamente pequeno. Sendo o comprimento máximo (mais detalhado a frente no relatório) é de 7,8 metro e o custo por metro é de R\$4,50.
+
+\paragraph{Conectores}
+
+Os conectores são importantíssimos para a correta montagem da tubulação, por serem conhecidos como os elos fracos na montagem da mesma, o grupo analisou e concordou com a utilização de conectores com melhor qualidade, mesmo tendo um custo mais alto, que se justifica pela vida útil e margem de segurança que os mesmos trazem ao sistema.
+
+Os conectores escolhidos são da marca Swagelok, uma multinacional americana com mais de 50 anos de produção em conectores. Esses conectores possuem um tipo de travagem que fornece:
+\begin{itemize}
+\item Excelente vedação para gás e ação de crimpagem no tubo.
+\item Fácil realização de corretas instalações.
+\item Reapertos consistentes.
+\item Excelente resistência à fadiga por vibrações e suporte do tubo, etc.
+\end{itemize}
+
+Como colocado acima a utilização dos mesmos é explicada por terem melhor resistência a:
+
+\begin{itemize}
+\item Vazamentos
+\item Vibração (cravamento no tubo).
+\item Choque térmico
+\item Corrosão
+\end{itemize}
+
+A Swagelok produz os conectores a partir dos mais diversos materiais, referente contato com a parte técnica da empresa foi conseguido documentos técnicos sobre valores máximos para temperatura e pressão, bem como o custo dos conectores de cada tipo de material, com isso pode-se realizar a correta escolha dos conectores para a utilização.
+
+O material escolhido é o latão, seguindo o conselho do responsável técnico da Swagelok.
+
+Com todos os dados em mãos é possível determinar margem de segurança em relação a pressão (99\%) e temperatura (50\%).
+
+Como informado anteriormente no relatório, temos três opções para implementação do sistema, que variam a quantidade de conectores. Em integração com o grupo de controle, discutimos quais conectores seriam precisos para a integração dos sistemas, após a discussão chegou-se ao consenso de quais conectores utilizar, independente da opção de implementação escolhida, o sistema precisa dos conectores listados abaixo:
+
+\begin{itemize}
+\item 5 Redutores (2-Sensor de Fluxo, 2-Reservatório e 1-Sensor de Temperatura).
+\item 2 T (Sensor de Pressão e de Temperatura).
+\item 2 Machos (Radiador).
+\end{itemize}
+
+A opção de implementação traz a variação da quantidade de cotovelos $90^{\circ}$, tal variação é especificada na tabela abaixo.
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+Opção & Quantidade de cotovelos \\
+\hline
+1 & 4 \\ \hline
+2 & 2 \\ \hline
+3 & 2 \\ \hline
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Reservatório}
+
+Seguindo a dica do professor sobre a utilização de materiais COTS, o reservatório escolhido é um reservatório de radiador automotivo, que se enquadra nas especificações necessárias, por ser fabricado em material de qualidade, com boa resistência a temperatura, além de contar com boa disponibilidade e baixo custo.
+
+A principal informação a se ter sobre o reservatório é sua capacidade, para o em questão a mesma é na faixa de 2 litros, tal capacidade é mais que necessária para o projeto, já que a partir de cálculos simples podemos determinar a quantidade de fluido em toda tubulação quando o sistema está hermeticamente fechado, uma condição primordial para a operação do sistema. Como informado anteriormente no relatório, temos três opções para implementação do sistema, que variam o comprimento da mangueira, modificando assim o volume de água no sistema.
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{|p{2cm}|p{2cm}|p{3cm}|}
+\hline
+Opção & Comprimento da mangueira (m) & Quantidade de fluxo na tubulação (ml) \\
+\hline
+1 & 6 & 42,40 \\ \hline
+2 & 6,5 & 45,93 \\ \hline
+3 & 7,8 & 54,40 \\ \hline
+\hline
+\end{tabular}
+\end{table}
+
+Com a ajuda da tabela acima podemos observar que a quantidade máxima de fluido presa na tubulação é 54,4 ml. O reservatório conta com a capacidade na faixa de 2 litros dando ao sistema uma margem de segurança na casa dos 90\%. 
+
+O reservatório em questão é produzido a partir do PEAD (Polietileno de Alta Densidade) que conta densidade igual ou maior que 0,941 $g/(cm)^3$, um baixo nível de ramificações, com alta densidade e altas forças intermoleculares, trazendo características como:
+
+\begin{itemize}
+\item Resistente a altas temperaturas.
+\item Alta resistência à tensão, compressão e tração;
+\item Baixa densidade em comparação com metais e outros materiais.
+\item Impermeável.
+\item Inerte (ao conteúdo), baixa reatividade.
+\item Atóxico.
+\item Pouca estabilidade dimensional.
+\end{itemize}
+
+O reservatório conta com dimensões gerais: 15 x 33 x 22 cm, e peso total (vazio): 355 gramas.
+
+\paragraph{Desenvolvimento do modelo em 3D}
+
+Para o desenvolvimento do modelo em 3D do sistema de arrefecimento foi utilizada a plataforma CATIA e, nesse modelo, foi priorizado o destaque à organização do sistema como um todo.
