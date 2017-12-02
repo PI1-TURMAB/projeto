@@ -1,21 +1,21 @@
 
 \section{Controle}
-Todo sistema que trabalha com parâmetros críticos, precisa ser monitorado e controlado de uma forma que o sistema possa manter sua funcionalidade e integridade por mais tempo.
+Todo sistema que trabalha com parâmetros críticos precisa ser monitorado e controlado de uma forma que o sistema possa manter sua funcionalidade e integridade por mais tempo.
 Sendo assim, considerando parâmetros cruciais dentro de um sistema de arrefecimento como temperatura, fluxo e pressão, 
-o objetivo da equipe de Controle foi de mostrar uma proposta para o sistema de monitoramento e controle de tal sistema de arrefecimento considerando os âmbitos funcionais e financeiros, 
+o objetivo da equipe de Controle foi mostrar uma proposta para o sistema de monitoramento e controle de tal sistema de arrefecimento,  considerando os âmbitos funcionais e financeiros, 
 procurando encontrar a solução mais eficiente e funcional que o mercado possa oferecer.
 \subsection{Comparação das propostas}
 Houveram duas ideias iniciais que giravam em torno dos sensores de temperatura para a realização do monitoramento dos parâmetros críticos: a primeira delas era focar em um sensor de temperatura que iria ser posicionado juntamente ao sensor 
-de pressão da Kistler o qual deve ser resfriado (proposta 1, sistema externo). 
+de pressão da Kistler, o qual deve ser resfriado (proposta 1, sistema externo). 
 Já a segunda ideia focaria em dois sensores mais baratos que seriam colocados um no 
-reservatório e outro na tubulação de saída do sensor de pressão da Kistler e a diferença 
+reservatório e outro na tubulação de saída do sensor de pressão da Kistler. A diferença 
 entre eles daria uma noção da temperatura geral do sistema e o quanto este deve ser 
 resfriado (proposta 2, sistema interno).
 
 Após melhor análise e estudo do problema, decidiu-se unir as duas propostas em uma só, criando uma terceira proposta que juntasse o melhor das duas.
 Dessa forma, essa nova proposta consistiria em um projeto com três sensores de temperatura: um mais próximo do sensor de pressão da Kistler, um na tubulação de saída do próprio sensor e outro no reservatório do líquido, além dos outros sensores de pressão, nível e fluxo.
 
-O diferencial da proposta final está no foco dado à cada sensor em diferentes períodos do teste do foguete híbrido. Durante a realização do teste, os sensores de temperatura internos (localizados no reservatório e na tubulação) serão analisados com maior atenção, a fim de manter a faixa de temperatura no nível de bom funcionamento do sensor de pressão da Kistler. Após o encerramento do teste, o foco principal estará no sensor de temperatura externo (localizado no adaptador da câmara de combustão).
+O diferencial da proposta final está no foco dado a cada sensor em diferentes períodos do teste do foguete híbrido. Durante a realização do teste, os sensores de temperatura internos (localizados no reservatório e na tubulação) serão analisados com maior atenção, a fim de manter a faixa de temperatura no nível de bom funcionamento do sensor de pressão da Kistler. Após o encerramento do teste, o foco principal estará no sensor de temperatura externo (localizado no adaptador da câmara de combustão).
 \newpage
 \begin{table}[]
     \centering
@@ -32,7 +32,7 @@ O diferencial da proposta final está no foco dado à cada sensor em diferentes 
 
 \subsection{Projeto Conceitual}
 
-Considerando então os requisitos necessários para o bom funcionamento do sistema e a proposta definida, foram definidos seis sensores, sendo eles três de temperatura, um de pressão, um de fluxo e um de nível, que serão a porta de entrada de dados e realizarão o monitoramento dos parâmetros cruciais: temperatura, pressão e fluxo. Após diversas pesquisas, os modelos mais adequados para cumprirem essas funções foram:
+Considerando então os requisitos necessários para o bom funcionamento do sistema e a proposta definida, foram definidos seis sensores, sendo três de temperatura, um de pressão, um de fluxo e um de nível, que serão a porta de entrada de dados e realizarão o monitoramento dos parâmetros cruciais: temperatura, pressão e fluxo. Após diversas pesquisas, os modelos mais adequados para cumprirem essas funções foram:
 \newpage
 \begin{itemize}
     \item \textbf{Sensor de Temperatura para o adaptador da câmara de combustão}
@@ -53,7 +53,7 @@ Considerando então os requisitos necessários para o bom funcionamento do siste
     \caption{Sensor de Temperatura para o adaptador da câmara de combustão}
     \end{table}
 
-A escolha deste sensor se deve ao fato principalmente da magnitude da temperatura no adaptador que, por meio de simulações realizadas pelo grupo de transmissão de calor, alcança a faixa de até 450ºC, na posição em que o sensor de pressão principal está localizado. Foi estabelecido um fator de segurança igual a 2, teorizando uma temperatura máxima de 900ºC no adaptador, o que dá maior margem para erros e falhas. Dessa forma, a escolha de um termopar tipo K se justifica, se for considerado a faixa de medição padrão (-200ºC a 1250ºC) e a alta disponibilidade desse tipo de termopar no mercado.
+A escolha deste sensor se deve ao fato principalmente da magnitude da temperatura no adaptador que, por meio de simulações realizadas pelo grupo de transmissão de calor, alcança a faixa de até 450ºC, na posição em que o sensor de pressão principal está localizado. Foi estabelecido um fator de segurança igual a 2, teorizando uma temperatura máxima de 900ºC no adaptador, o que dá maior margem para erros e falhas. Dessa forma, a escolha de um termopar tipo K se justifica, se for considerada a faixa de medição padrão (-200ºC a 1250ºC) e a alta disponibilidade desse tipo de termopar no mercado.
 
 Levando em consideração que os testes realizados no foguete híbrido estão entre 15 e 40 segundos, é necessário que o tempo de resposta dos sensores em geral esteja na escala de milissegundos, a fim de maximizar a coleta de dados e auxiliar na obtenção de resultados dos testes.
 
@@ -87,7 +87,7 @@ Segundo o Manual Técnico de Temperatura da empresa OMEGA, o tempo de resposta d
 
 Serão utilizados dois sensores deste tipo, um para o reservatório e outro para a tubulação. O sensor que vai no reservatório tem a finalidade de medir a temperatura no local, que segundo estudos do grupo de Transmissão de Calor, deverá estar na faixa de 25 à 30 ºC. A utilização desse sensor é vista como medida de redundância, onde sua principal função é a verificação do funcionamento do sistema de arrefecimento. 
 
-Já o outro sensor, se encontra próximo a tubulação de saída do sensor de pressão da Kistler, com a finalidade de monitorar a temperatura da água na tubulação. Com as simulações do grupo de Transmissão de Calor foi definido que a temperatura do líquido na tubulação de saída será por volta de 90 ºC.
+Já o outro sensor se encontra próximo a tubulação de saída do sensor de pressão da Kistler, com a finalidade de monitorar a temperatura da água na tubulação. Com as simulações do grupo de Transmissão de Calor foi definido que a temperatura do líquido na tubulação de saída será por volta de 90 ºC.
 
 Outros fatores cruciais para a escolha desse sensor para essas duas áreas foram a faixa de medição (que é compatível com as duas localidades), o fato do sensor ser à prova d’água e seu tempo de resposta de menos de 750 ms
 
@@ -131,7 +131,7 @@ A presença desse sensor baseia-se no fato de que um aumento significativo de pr
     \caption{Sensor de Fluxo para a tubulação}
     \end{table}
 
-Este sensor de fluxo ficará posicionado na tubulação do sistema. Seu principal objetivo é monitorar o fluxo do líquido, a fim de acompanhar o funcionamento da bomba d’água. Este sensor servirá como mais um indicativo caso uma falha aconteça no funcionamento da bomba, já que os valores retornados pelo sensor serão fora do esperado, dando pistas sobre qual o possível problema. A escolha deste modelo de sensor de fluxo em específico, se deve a sua ampla utilização no mercado, a sua compatibilidade com diversos microcontroladores existentes.
+Este sensor de fluxo ficará posicionado na tubulação do sistema. Seu principal objetivo é monitorar o fluxo do líquido, a fim de acompanhar o funcionamento da bomba d’água. Este sensor servirá como mais um indicativo caso uma falha aconteça no funcionamento da bomba, já que os valores retornados pelo sensor serão fora do esperado, dando pistas sobre qual o possível problema. A escolha deste modelo de sensor de fluxo em específico se deve a sua ampla utilização no mercado e sua compatibilidade com diversos microcontroladores existentes.
 \newpage
 \begin{itemize}
     \item \textbf{Sensor de Nível para o reservatório}
@@ -163,7 +163,7 @@ Cabe ressaltar que o uso de um sensor de nível para o reservatório é impresci
 \end{itemize}
 
 O grupo de controle determinou 5 sensores para o projeto do sistema de arrefecimento, assim é necessário analisar a necessidade de amplificação de sinais para a correta conectividade com a placa NI6320, que por sua vez aceita apenas sinais de tensão entre 0,2 e 10 Volts, visando assim ter uma maior confiabilidade nos dados transmitidos pelo sensor.
-A tabela abaixo determina, para cada sensor a tensão:
+A tabela abaixo determina para cada sensor a tensão:
 
 \begin{table}[]
     \centering
@@ -182,9 +182,9 @@ A tabela abaixo determina, para cada sensor a tensão:
 De acordo com uma análise detalhada dos Datasheets usados no projeto de arrefecimento, foram determinadas as saídas de cada sensor. A partir dos requisitos da placa de desenvolvimento usada para o desenvolvimento do projeto é possível afirmar que apenas dois sensores necessitam de amplificação do sinal para a leitura correta. Para os sensores 2, 4 e 5 não há necessidade de amplificação dos sinais, já para os sensores 1 e 3 será necessário. 
 
 O sensor 2 (sensor de temperatura DS18B20) providencia de 9 a 12 bits (configuráveis) que representam a temperatura do dispositivo. A informação é enviada do sensor por apenas um fio, ou seja, o sensor se comunica com a placa de forma serial. Portanto, a tensão de saída será do tipo degrau e representa uma comunicação digital com o microprocessador, do tipo nível lógico 0 ou 1. A partir do Datasheet, foi possível identificar que \textit{VLH} (voltagem do logic high - nível lógico alto) é de 4.5V e que \textit{VLL} (voltagem do low logic - nível lógico baixo) é de 0.5V.
-Os sensores 4 e 5 são do tipo pulso magnético. O sensor 4 (sensor de fluxo YF-S401) possui uma estrutura similar a uma concha com pás e uma bobina que uma vez que o fluxo passe pelas pás, o mesmo, pela conservação do momento angular, gera movimento nas pás e, a cada pá que passa pela bobina ela, emite um pulso de corrente através de um fio para o microcontrolador. O sensor 5 (sensor de nível) funciona de maneira semelhante, porém, ao invés de um sistema de pás, a bobina gera um pulso cada vez que o fluxo gera empuxo no mecanismo de acionamento. A saída é, também, do tipo lógico, ou seja, 0.5V para \textit{VLL} e 4.5V para \textit{VLH}.
+Os sensores 4 e 5 são do tipo pulso magnético. O sensor 4 (sensor de fluxo YF-S401) possui uma estrutura similar a uma concha com pás e uma bobina que uma vez que o fluxo passe pelas pás, o mesmo, pela conservação do momento angular, gera movimento nas pás e, a cada pá que passa pela bobina, emite um pulso de corrente através de um fio para o microcontrolador. O sensor 5 (sensor de nível) funciona de maneira semelhante, porém, ao invés de um sistema de pás, a bobina gera um pulso cada vez que o fluxo gera empuxo no mecanismo de acionamento. A saída é, também, do tipo lógico, ou seja, 0.5V para \textit{VLL} e 4.5V para \textit{VLH}.
 
-Os sensores 1 e 3 são do tipo divisores de tensão. A saída de tensão está relacionada com a alcance da grandeza medida (Para o sensor 1, pressão. Para o sensor 3, temperatura). A saída do sensor 1 está na faixa entre -1mV e 40mV e a do sensor 3 está na faixa entre -6.5mV e -48.8 mV.
+Os sensores 1 e 3 são do tipo divisores de tensão. A saída de tensão está relacionada ao alcance da grandeza medida (para o sensor 1, pressão. Para o sensor 3, temperatura). A saída do sensor 1 está na faixa entre -1mV e 40mV e a do sensor 3 está na faixa entre -6.5mV e -48.8 mV.
 Foi estabelecido que a amplificação dos sinais utilizará a faixa de 0,2 a 5V, logo é imprescindível o uso de amplificadores instrumentais. Estes conseguem amplificar a tensão e mudar a sua faixa de atuação. A tabela a seguir determina a transição de faixas de tensão que será feita pelos amplificadores:
 
 \begin{table}[]
@@ -258,7 +258,7 @@ Como $\alpha$ = 2 * \(\frac{R2}{R1}\), então precisamos escolher resistores com
     R4 = R3 = 100k\omega
 \end{equation}
 
-Desta forma, segue abaixo o circuito projetado e simulado, no software Proteus 8 Professional:
+Desta forma, segue abaixo o circuito projetado e simulado no software Proteus 8 Professional:
 
 \begin{figure}[!htb]                  
 	\centering                          
@@ -282,7 +282,7 @@ Desta forma, segue abaixo o circuito projetado e simulado, no software Proteus 8
 \begin{itemize}
     \item \textbf{Esquemáticos do Sistema de Controle}
 \end{itemize}
-Um esquemático é uma forma demonstração visual que possibilita uma visão mais concreta de como um projeto será construído. Sendo assim, tendo em vista que as definições dos produtos e componentes está concluída, será demonstrado a seguir todas as ligações e o funcionamento dos componentes que serão controlados pelo sistema a partir do software de simulações esquemáticas Fritzing.
+Um esquemático é uma forma demonstração visual que possibilita uma visão mais concreta de como um projeto será construído. Sendo assim, tendo em vista que as definições dos produtos e componentes está concluída, serão demonstrados a seguir todas as ligações e o funcionamento dos componentes que serão controlados pelo sistema a partir do software de simulações esquemáticas Fritzing.
 
 \textbf{Componentes utilizados:}
 \begin{itemize}
@@ -412,9 +412,9 @@ A imagem abaixo mostra uma visão geral de todas as conexões realizada pelo Mic
     \caption{ Diagrama Bill Of Materials }   \label{figbom}              
 \end{figure} 
 
-O sistema de controle é composto por 3 etapas distintas, o controle de temperatura, o controle de pressão e o controle do fluxo, sendo que todas elas possuem componentes específicos por área, e que atuam de maneira paralela para o funcionamento do todo, sendo interligadas pela placa de processamento para controle, como mostra na figura acima.
+O sistema de controle é composto por 3 etapas distintas, o controle de temperatura, o controle de pressão e o controle do fluxo, sendo que todas elas possuem componentes específicos por área, e que atuam de maneira paralela para o funcionamento do todo, sendo interligadas pela placa de processamento para controle, como mostra a figura acima.
 
-O controle de temperatura é dividido pelo subsistemas de: monitoramento de temperatura e controle de temperatura. O monitoramento é feito por três sensores de temperatura. Já o controle é feito a partir da placa de processamento que controla o acionamento de quatro ventoinhas por um módulo auxiliar.
+O controle de temperatura é dividido pelos subsistemas de monitoramento de temperatura e controle de temperatura. O monitoramento é feito por três sensores de temperatura. Já o controle é feito a partir da placa de processamento que controla o acionamento de quatro ventoinhas por um módulo auxiliar.
 
 O controle de pressão é composto pelo subsistema de monitoramento de pressão, sendo realizado por um sensor de pressão.
 
